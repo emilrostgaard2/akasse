@@ -1,0 +1,72 @@
+{
+  "navn": "AkasseMatch",
+  "domaene": "https://akassematch.dk",
+  "slogan": "Find den a-kasse der passer til dit fag og din pengepung",
+  "beskrivelse": "Sammenlign priser, målgrupper og fordele på alle danske a-kasser. Uafhængigt overblik, opdaterede kontingenter og en dagpengeberegner.",
+  "email": "kontakt@akassematch.dk",
+  "cvr": "00000000",
+  "firma": "AkasseMatch",
+  "adresse": "Danmark",
+  "sprog": "da-DK",
+  "prisaar": 2026,
+  "opdateret": "2026-08-01",
+  "satser": {
+    "maks_fuldtid": 22041,
+    "maks_deltid": 14694,
+    "tillaeg_fuldtid": 26198,
+    "tillaeg_deltid": 17465,
+    "dimittend_forsoerger": 18074,
+    "dimittend_ikke_forsoerger": 15759,
+    "dimittend_over30_efter": 13690,
+    "dimittend_under30_efter": 10838,
+    "statsbidrag_atp": 414,
+    "efterloensbidrag": 593,
+    "loenkrav_maks_sats": 26620,
+    "maks_medregnet_maaned": 23886,
+    "indkomstkrav_3aar": 286632,
+    "timekrav_genoptjening": 1924,
+    "beregning_maks_grundlag": 23886,
+    "fradrag_marginalskat": 0.31,
+    "maks_medregnet_md": 23886
+  },
+  "nav": [
+    {
+      "titel": "Sammenlign priser",
+      "url": "/sammenlign/"
+    },
+    {
+      "titel": "A-kasser",
+      "url": "/a-kasser/"
+    },
+    {
+      "titel": "Dagpengeberegner",
+      "url": "/dagpengeberegner/"
+    },
+    {
+      "titel": "Guides",
+      "url": "/guides/"
+    }
+  ],
+  "footer_links": [
+    {
+      "titel": "Om AkasseMatch",
+      "url": "/om-os/"
+    },
+    {
+      "titel": "Sådan tjener vi penge",
+      "url": "/saadan-tjener-vi-penge/"
+    },
+    {
+      "titel": "Kontakt",
+      "url": "/kontakt/"
+    },
+    {
+      "titel": "Privatlivspolitik",
+      "url": "/privatlivspolitik/"
+    },
+    {
+      "titel": "Cookiepolitik",
+      "url": "/cookiepolitik/"
+    }
+  ]
+}

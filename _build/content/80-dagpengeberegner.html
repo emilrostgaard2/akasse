@@ -1,0 +1,157 @@
+url: /dagpengeberegner/
+titel: Dagpengeberegner [[aar]] — beregn din sats og dækningsgrad
+h1: Dagpengeberegner [[aar]]: beregn din sats på ti sekunder
+krumme: Dagpengeberegner
+kicker: Værktøj · [[aar]]
+manchet: Indtast din løn og se, hvad du får i dagpenge, hvor stor en del af lønnen det dækker, og hvad a-kassen reelt koster dig efter skattefradrag. Beregningen bruger [[aar]]-satserne og opdateres, mens du skriver.
+beskrivelse: Beregn dine dagpenge i [[aar]]. Se din sats, din dækningsgrad og hvad a-kassen koster efter fradrag. Maksimal sats [[maks_sats]] kr./md. Gratis og uden login.
+opdateret: [[opdateret]]
+laestid: 8
+prioritet: 0.85
+---
+<p class="ingress">Dagpengene udgør 90 procent af din tidligere indkomst — men med et loft på [[maks_sats]] kr. om måneden. Det betyder, at dækningsgraden falder kraftigt, jo mere du tjener. Beregneren herunder viser dig præcis, hvor du lander.</p>
+
+{{beregner}}
+
+<h2>Sådan regner beregneren</h2>
+
+<p>Beregningen følger de samme trin, som din a-kasse bruger:</p>
+
+<ol class="trin">
+  <li><strong>Beregningsgrundlaget findes.</strong> A-kassen tager gennemsnittet af din indkomst i de 12 måneder med højest indtjening inden for de seneste 24 måneder. Der kan højst medregnes [[maks_medregnet]] kr. pr. måned.</li>
+  <li><strong>Arbejdsmarkedsbidraget trækkes fra.</strong> 8 procent fratrækkes, fordi du ikke betaler AM-bidrag af dagpenge.</li>
+  <li><strong>90 procent beregnes.</strong> Dagpengene udgør 90 procent af det resterende grundlag.</li>
+  <li><strong>Loftet lægges på.</strong> Er resultatet højere end [[maks_sats]] kr. om måneden, udbetales maksimumssatsen.</li>
+</ol>
+
+<p>Beregneren viser et estimat. Din endelige sats fastsættes af a-kassen ud fra de lønoplysninger, din arbejdsgiver har indberettet til indkomstregistret — ikke ud fra det, du selv oplyser. Har du bonus, provision, fri bil eller flere arbejdsgivere, kan resultatet afvige.</p>
+
+<h2>Hvad betyder dækningsgraden?</h2>
+
+<p>Dækningsgraden er den andel af din nuværende løn, dagpengene erstatter. Den er det vigtigste tal i hele beregningen, fordi den fortæller dig, hvor stort dit indkomstfald bliver, hvis du mister jobbet i morgen.</p>
+
+<div class="tabel-wrap" role="region" tabindex="0" aria-label="Dækningsgrad ved forskellige lønninger">
+<table class="data data--enkel">
+  <caption>Dagpenge og dækningsgrad ved forskellige lønninger (fuldtidsforsikret, [[aar]])</caption>
+  <thead><tr><th scope="col">Månedsløn før skat</th><th scope="col">Dagpenge pr. md.</th><th scope="col">Dækningsgrad</th><th scope="col">Indkomstfald pr. md.</th></tr></thead>
+  <tbody>
+    <tr><td>22.000 kr.</td><td class="tal-celle">18.216 kr.</td><td class="tal-celle">83 %</td><td class="tal-celle">3.784 kr.</td></tr>
+    <tr><td>26.000 kr.</td><td class="tal-celle">21.528 kr.</td><td class="tal-celle">83 %</td><td class="tal-celle">4.472 kr.</td></tr>
+    <tr><td>30.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">73 %</td><td class="tal-celle">7.959 kr.</td></tr>
+    <tr><td>38.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">58 %</td><td class="tal-celle">15.959 kr.</td></tr>
+    <tr><td>48.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">46 %</td><td class="tal-celle">25.959 kr.</td></tr>
+    <tr><td>65.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">34 %</td><td class="tal-celle">42.959 kr.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Bemærk vendepunktet omkring 27.000 kr. Op til det niveau følger dagpengene din løn. Over det er satsen låst, og hver ekstra tusinde kroner i løn er hundrede procent udækket.</p>
+
+<p>Det er hele forklaringen på, hvorfor lønsikring findes, og hvorfor den primært giver mening for folk med en løn over cirka 30.000 kr. om måneden.</p>
+
+<h2>Alle satser i [[aar]]</h2>
+
+{{tabel:satser}}
+
+<h2>Hvad koster a-kassen reelt?</h2>
+
+<p>Beregneren viser også, hvad kontingentet koster dig efter skattefradrag. Kontingentet er fuldt fradragsberettiget, og a-kassen indberetter automatisk beløbet til Skattestyrelsen.</p>
+
+<p>Med en marginalskat omkring 31 procent betyder det, at et kontingent på [[billigst_alle_pris]] kr. reelt koster cirka 364 kr. om måneden. Over et år er det cirka 4.368 kr. — sat op mod en forsikringsværdi på op mod 528.000 kr. over en toårig dagpengeperiode.</p>
+
+{{tabel:alle}}
+
+<h2>Sådan påvirker din situation satsen</h2>
+
+<h3>Er du fuldtids- eller deltidsforsikret?</h3>
+<p>Fuldtidsforsikret giver en maksimal sats på [[maks_sats]] kr. om måneden, deltidsforsikret [[maks_deltid]] kr. Deltidsforsikring giver kun mening, hvis du fast arbejder under 30 timer om ugen. Arbejder du fuld tid, men er deltidsforsikret, får du en markant lavere sats — selvom du har betalt kontingent i årevis.</p>
+
+<h3>Har du ret til beskæftigelsestillæg?</h3>
+<p>Beskæftigelsestillægget hæver satsen til [[tillaeg]] kr. om måneden i de første tre måneder. Det kræver fire års uafbrudt a-kassemedlemskab, en løn der berettiger til højeste sats, og mindst to års arbejde inden for de seneste tre år. Tillægget bortfalder efter 481 timers ledighed.</p>
+
+<h3>Er du nyuddannet?</h3>
+<p>Så beregnes satsen ikke ud fra løn. Du får dimittendsats: [[dim_f]] kr. med forsørgerpligt, [[dim_u]] kr. uden i de første tre måneder. Læs mere om <a href="/dimittend-dagpenge/">dagpenge som nyuddannet</a>.</p>
+
+<h3>Er du selvstændig?</h3>
+<p>Satsen beregnes ud fra virksomhedens skattemæssige overskud før renter. Mange selvstændige holder overskuddet lavt af skattemæssige grunde, hvilket giver en tilsvarende lav dagpengesats. Se guiden om <a href="/a-kasse-selvstaendig/">a-kasse for selvstændige</a>.</p>
+
+<h2>Kan lønsikring betale sig for dig?</h2>
+
+<p>Lønsikring er en privat forsikring, der supplerer dagpengene op til en højere andel af din tidligere løn — typisk 70-80 procent — i en begrænset periode på seks til tolv måneder. Den tegnes gennem a-kassen eller et forsikringsselskab.</p>
+
+<p>Regnestykket afhænger helt af din løn. Her er hullet mellem dagpengene og en typisk lønsikringsdækning på 80 procent:</p>
+
+<div class="tabel-wrap" role="region" tabindex="0" aria-label="Behov for lønsikring">
+<table class="data data--enkel">
+  <caption>Hvor stort er hullet mellem dagpenge og 80 % dækning?</caption>
+  <thead><tr><th scope="col">Månedsløn</th><th scope="col">Dagpenge</th><th scope="col">80 % af løn</th><th scope="col">Hul pr. måned</th></tr></thead>
+  <tbody>
+    <tr><td>26.000 kr.</td><td class="tal-celle">21.528 kr.</td><td class="tal-celle">20.800 kr.</td><td class="tal-celle">0 kr.</td></tr>
+    <tr><td>32.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">25.600 kr.</td><td class="tal-celle">3.559 kr.</td></tr>
+    <tr><td>42.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">33.600 kr.</td><td class="tal-celle">11.559 kr.</td></tr>
+    <tr><td>55.000 kr.</td><td class="tal-celle">[[maks_sats]] kr.</td><td class="tal-celle">44.000 kr.</td><td class="tal-celle">21.959 kr.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Op til cirka 27.000 kr. i månedsløn er der intet hul — dagpengene dækker allerede omkring 80 procent. Derover vokser hullet med hver krone, du tjener, fordi dagpengene er låst på maksimumsatsen.</p>
+
+<p>Det vigtigste forbehold ved lønsikring er karensperioden. En ny police dækker typisk først efter seks til tolv måneder, og forsikringen skal altså tegnes, mens du er i arbejde og ikke har mistanke om, at ledighed er på vej. Tegner du den, når opsigelsen ligger på bordet, dækker den ikke.</p>
+
+<h2>Tre regneeksempler</h2>
+
+<h3>Sygeplejersken med 38.000 kr. i løn</h3>
+<p>Dagpengene bliver [[maks_sats]] kr. om måneden, altså en dækningsgrad på 58 procent. Indkomstfaldet er cirka 16.000 kr. om måneden før skat. Kontingentet hos DSA er [[billigst_pris]] kr. om måneden, hvilket efter fradrag svarer til cirka 335 kr. Forsikringen koster altså 0,9 procent af den månedsløn, den beskytter.</p>
+
+<h3>Den nyuddannede uden forsørgerpligt</h3>
+<p>Dimittendsatsen er [[dim_u]] kr. om måneden i de første tre måneder og falder derefter. Her giver det ikke mening at regne på dækningsgrad, fordi der ikke har været en løn — pointen er i stedet, at satsen er fast, og at karensmåneden kan undgås ved at melde sig ind som studerende i god tid.</p>
+
+<h3>Den selvstændige med 45.000 kr. i overskud</h3>
+<p>Dagpengene bliver [[maks_sats]] kr., altså en dækningsgrad på 49 procent. Har du optimeret skatten ved at holde overskuddet lavt, bliver satsen tilsvarende lavere — beregningen tager udgangspunkt i virksomhedens skattemæssige resultat, ikke i hvad du har hævet privat.</p>
+
+<h2>Fire ting der ofte gør satsen forkert</h2>
+
+<p>Din a-kasse beregner satsen ud fra det, arbejdsgiveren har indberettet til indkomstregistret. Er indberetningen forkert eller ufuldstændig, bliver satsen det også — og fejlen opdages sjældent af sig selv.</p>
+
+<ul>
+  <li><strong>Bonus indberettet i én måned.</strong> Er en årsbonus indberettet samlet, kan den falde uden for de 12 måneder, der bruges i beregningen, eller blive skåret af loftet på [[maks_medregnet]] kr. for netop den måned. Det kan koste flere hundrede kroner om måneden i sats.</li>
+  <li><strong>Flere arbejdsgivere.</strong> Har du haft to job samtidig, skal begge indgå. Mangler den ene i indberetningen, beregnes satsen for lavt.</li>
+  <li><strong>Fri bil og personalegoder.</strong> Nogle goder tæller med i beregningsgrundlaget, andre gør ikke. Er de indberettet forkert, forplanter fejlen sig til satsen.</li>
+  <li><strong>Perioder med barsel eller sygdom.</strong> Særlige regler gør, at visse perioder kan holdes uden for beregningen, så din sats ikke trækkes ned af måneder med lav indkomst. Det sker ikke automatisk — du skal gøre a-kassen opmærksom på det.</li>
+</ul>
+
+<p>Bed altid om at se beregningsgrundlaget, når din sats er fastsat. Du har ret til at få oplyst, hvilke måneder og beløb der er brugt, og det er langt nemmere at få rettet en fejl med det samme end et år senere.</p>
+
+<h2>Hvad beregneren ikke tager højde for</h2>
+
+<ul>
+  <li><strong>Din konkrete skatteprocent.</strong> Beregneren bruger en marginalskat på 31 procent. Din reelle procent afhænger af kommune, kirkeskat og øvrige fradrag.</li>
+  <li><strong>Supplerende dagpenge.</strong> Arbejder du på deltid, mens du er ledig, nedsættes dagpengene time for time efter særlige regler.</li>
+  <li><strong>Feriepenge og fratrædelsesgodtgørelse.</strong> Begge dele kan udskyde starten på dine dagpenge.</li>
+  <li><strong>Obligatorisk Pension.</strong> Der indbetales 2,1 procent af dine dagpenge til pension i [[aar]]. Beløbet lægges oveni og reducerer ikke din udbetaling.</li>
+  <li><strong>Karensdage og G-dage.</strong> Ved visse opsigelser gælder særlige regler for de første ledige dage.</li>
+</ul>
+
+{{cta}}
+
+<h2>Ofte stillede spørgsmål om dagpengeberegning</h2>
+
+<div class="faq">
+<details open><summary>Hvor meget får jeg i dagpenge?</summary><div><p>90 procent af din tidligere indkomst efter AM-bidrag, med et loft på [[maks_sats]] kr. om måneden for fuldtidsforsikrede. Tjener du mere end cirka [[loenkrav]] kr. om måneden, får du maksimalsatsen uanset hvor meget mere du tjener.</p></div></details>
+
+<details><summary>Er beregneren præcis?</summary><div><p>Den giver et retvisende estimat for en almindelig månedsløn. Den endelige sats fastsættes af din a-kasse ud fra de lønoplysninger, din arbejdsgiver har indberettet til indkomstregistret. Har du bonus, provision, fri bil eller flere arbejdsgivere, kan der være afvigelser.</p></div></details>
+
+<details><summary>Får jeg mere i dagpenge i en dyr a-kasse?</summary><div><p>Nej. Satsen er fastsat ved lov og er identisk i alle a-kasser. Kontingentet påvirker ikke udbetalingen med en eneste krone — det er derfor, det giver mening at sammenligne priser.</p></div></details>
+
+<details><summary>Hvornår kan det betale sig med lønsikring?</summary><div><p>Typisk hvis du tjener over cirka 30.000 kr. om måneden, hvor dagpengene dækker under tre fjerdedele af din løn. Vær opmærksom på karensperioden: en ny lønsikring dækker først efter typisk seks til tolv måneder, så den skal tegnes i god tid.</p></div></details>
+
+<details><summary>Betaler jeg skat af dagpenge?</summary><div><p>Ja, dagpenge er skattepligtig A-indkomst, og a-kassen trækker skat efter dit skattekort. Du betaler dog ikke arbejdsmarkedsbidrag, da det allerede er fratrukket i beregningen af satsen.</p></div></details>
+
+<details><summary>Hvor lang tid går der, før jeg får den første udbetaling?</summary><div><p>Regn med op mod en måned fra din første ledige dag. Din sag skal behandles og din sats beregnes, og dagpenge udbetales bagud én gang om måneden. Herefter kommer udbetalingen fast, typisk sidste bankdag i måneden.</p></div></details>
+</div>
+
+<h2>Næste skridt</h2>
+
+<p>Kender du nu din sats, er det næste spørgsmål, hvad du betaler for den. Dagpengene er ens overalt, så kontingentet er det eneste, du reelt kan påvirke. Forskellen mellem billigste og dyreste a-kasse er [[aarlig_forskel]] kr. om året.</p>
+
+<p><a href="/sammenlign/">Sammenlign alle [[antal]] a-kasser</a>, eller se <a href="/billig-a-kasse/">hvilken a-kasse der er billigst i [[aar]]</a>.</p>

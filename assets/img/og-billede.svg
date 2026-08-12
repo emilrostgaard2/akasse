@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#0d2f2b"/>
+<circle cx="1050" cy="120" r="220" fill="#0d4f47" opacity="0.6"/>
+<circle cx="150" cy="560" r="180" fill="#0d4f47" opacity="0.4"/>
+<text x="80" y="200" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="34" fill="#d6f24b" letter-spacing="4">AKASSEMATCH.DK</text>
+<text x="80" y="320" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="82" font-weight="800" fill="#ffffff">Sammenlign alle</text>
+<text x="80" y="410" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="82" font-weight="800" fill="#ffffff">24 a-kasser i 2026</text>
+<text x="80" y="500" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="36" fill="#a9c4bd">Fra 485 kr./md. · dagpengene er ens overalt</text>
+</svg>

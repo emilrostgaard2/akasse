@@ -1,0 +1,938 @@
+[
+  {
+    "slug": "det-faglige-hus",
+    "navn": "Det Faglige Hus A-kasse",
+    "kort": "Det Faglige Hus",
+    "pris": 528,
+    "fagforening_tillaeg": 69,
+    "medlemmer": 242000,
+    "type": "tvaerfaglig",
+    "badge": "Billigst for alle",
+    "logo": "det-faglige-hus.png",
+    "stiftet": 1993,
+    "maalgruppe": "Alle brancher og uddannelsesniveauer",
+    "hvem": "Dig der vil have den laveste faste udgift, og som ikke har brug for en overenskomstbærende fagforening.",
+    "om": [
+      "Det Faglige Hus er den billigste a-kasse i Danmark, som alle kan blive medlem af uanset uddannelse, fag eller branche. Med et kontingent på 528 kr. om måneden ligger de under gennemsnittet for tværfaglige a-kasser, og fagforeningsdelen koster kun 69 kr. ekstra om måneden — langt under de 400-500 kr., de klassiske forbund typisk tager.",
+      "Prisen er lav, fordi Det Faglige Hus ikke indgår overenskomster og ikke støtter politiske partier. Det betyder også, at du ikke får konfliktunderstøttelse ved strejke og lockout, og at du ikke har et forbund i ryggen ved overenskomstforhandlinger. For langt de fleste lønmodtagere i private virksomheder uden overenskomst gør det ingen praktisk forskel — men er du ansat på en arbejdsplads med overenskomst og aktivt tillidsmandsarbejde, får du mere for pengene hos det forbund, der dækker dit område."
+    ],
+    "fordele": [
+      "Landets billigste a-kasse, der er åben for alle",
+      "Fagforening for kun 69 kr./md. oveni",
+      "Optager både lønmodtagere og selvstændige",
+      "Du kan blive medlem uanset uddannelse og branche"
+    ],
+    "ulemper": [
+      "Indgår ikke overenskomster",
+      "Ingen konfliktunderstøttelse ved strejke",
+      "Mindre branchespecifik rådgivning"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": true
+    },
+    "hjemmeside": "https://www.detfagligehus.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "ase",
+    "navn": "Ase A-kasse",
+    "kort": "Ase",
+    "pris": 560,
+    "fagforening_tillaeg": 74,
+    "medlemmer": 130000,
+    "type": "tvaerfaglig",
+    "badge": "Bedst til selvstændige",
+    "logo": "ase.png",
+    "stiftet": 1975,
+    "maalgruppe": "Selvstændige, freelancere og lønmodtagere i alle brancher",
+    "hvem": "Dig der driver virksomhed, arbejder som freelancer eller overvejer at starte for dig selv.",
+    "om": [
+      "Ase er den a-kasse i Danmark, der har specialiseret sig mest i selvstændige. De har rådgivere, der udelukkende arbejder med virksomhedsejere, og de kender reglerne for ophør af virksomhed, formel ophørserklæring, bibeskæftigelse og de grænser, der afgør, om du overhovedet kan få dagpenge som selvstændig.",
+      "Kontingentet på 560 kr. om måneden er blandt de højeste, men Ase er samtidig åben for alle — også almindelige lønmodtagere. Fagforeningsdelen koster 74 kr. ekstra. Vælger du Ase udelukkende som lønmodtager uden komplicerede indkomstforhold, betaler du reelt for en specialistviden, du ikke bruger. Har du derimod et CVR-nummer, honorarindkomst eller planer om at starte selv, er merprisen på cirka 32 kr. om måneden i forhold til den billigste a-kasse hurtigt tjent ind på én rigtig rådgivning."
+    ],
+    "fordele": [
+      "Landets stærkeste rådgivning til selvstændige",
+      "Åben for alle brancher og uddannelsesniveauer",
+      "Gode digitale selvbetjeningsløsninger",
+      "Fagforening for kun 74 kr./md. oveni"
+    ],
+    "ulemper": [
+      "Blandt de dyreste kontingenter",
+      "Ingen overenskomstdækning",
+      "Specialistviden du måske ikke bruger som almindelig lønmodtager"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": true
+    },
+    "hjemmeside": "https://www.ase.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "krifa",
+    "navn": "Krifa A-kasse",
+    "kort": "Krifa",
+    "pris": 556,
+    "fagforening_tillaeg": 159,
+    "medlemmer": 147091,
+    "type": "tvaerfaglig",
+    "badge": null,
+    "logo": "krifa.png",
+    "stiftet": 1899,
+    "maalgruppe": "Alle brancher, også selvstændige",
+    "hvem": "Dig der lægger vægt på jobsøgningshjælp, trivsel og personlig sparring frem for klassisk fagforeningskamp.",
+    "om": [
+      "Krifa er en tværfaglig a-kasse, der optager alle uanset fag og uddannelse. Organisationen bygger på et værdigrundlag om godt arbejdsliv frem for konflikt, og de laver blandt andet den årlige undersøgelse God Arbejdslyst, som bliver citeret bredt i danske medier.",
+      "Med 556 kr. om måneden ligger Krifa i den dyre ende, og fagforeningsdelen koster 159 kr. ekstra. Til gengæld får du et stort udbud af jobsøgningsforløb, karrieresparring og webinarer, og Krifa er kendt for høj medlemstilfredshed. Krifa indgår ikke overenskomster på samme måde som LO-forbundene, så er du ansat under en overenskomst med aktivt tillidsmandsarbejde, er du bedre dækket i det relevante fagforbund."
+    ],
+    "fordele": [
+      "Åben for alle uanset uddannelse og branche",
+      "Stort udbud af jobsøgnings- og trivselsforløb",
+      "Optager også selvstændige",
+      "Høj medlemstilfredshed i uafhængige målinger"
+    ],
+    "ulemper": [
+      "Kontingent i den høje ende",
+      "Indgår ikke overenskomster som LO-forbundene",
+      "Fagforeningstillæg dyrere end hos Det Faglige Hus og Ase"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": true
+    },
+    "hjemmeside": "https://www.krifa.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "frie",
+    "navn": "Frie – Frie Funktionærer A-kasse",
+    "kort": "Frie",
+    "pris": 555,
+    "fagforening_tillaeg": 149,
+    "medlemmer": 44614,
+    "type": "tvaerfaglig",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1959,
+    "maalgruppe": "Funktionærer, lønmodtagere og selvstændige på tværs af brancher",
+    "hvem": "Dig der vil have én fast sagsbehandler frem for at tale med en ny medarbejder hver gang.",
+    "om": [
+      "Frie er en tværfaglig a-kasse med cirka 44.600 medlemmer. Den store forskel til de øvrige tværfaglige er størrelsen: Frie er lille nok til, at du får tildelt en fast kontaktperson, som følger din sag hele vejen gennem ledighedsforløbet. Det betyder noget, hvis din situation er kompliceret — for eksempel ved sygdom under ledighed, deltidsarbejde eller supplerende dagpenge.",
+      "Kontingentet på 555 kr. om måneden ligger i den høje ende blandt de tværfaglige, og fagforeningen koster 149 kr. ekstra. Frie tilbyder også rabat på private forsikringer og professionel hjælp til jobsøgning, hvilket kan opveje merprisen, hvis du rent faktisk bruger ydelserne."
+    ],
+    "fordele": [
+      "Fast kontaktperson gennem hele forløbet",
+      "Åben for alle brancher",
+      "Tager også selvstændige",
+      "Rabat på private forsikringer"
+    ],
+    "ulemper": [
+      "Kontingent i den høje ende",
+      "Ingen overenskomstdækning",
+      "Færre lokale afdelinger end de store forbund"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": true
+    },
+    "hjemmeside": "https://www.frie.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "min-akasse",
+    "navn": "Min A-kasse",
+    "kort": "Min A-kasse",
+    "pris": 542,
+    "fagforening_tillaeg": null,
+    "medlemmer": 50000,
+    "type": "tvaerfaglig",
+    "badge": null,
+    "logo": "min-akasse.png",
+    "stiftet": 2011,
+    "maalgruppe": "Lønmodtagere og selvstændige på tværs af fag",
+    "hvem": "Dig der vil have en ren a-kasse uden fagforening, men stadig åben for alle brancher.",
+    "om": [
+      "Min A-kasse er en ren a-kasse uden tilknyttet fagforening, som samarbejder med en række mindre fagforbund. Det gør den relevant, hvis du enten allerede er medlem af et forbund et andet sted, eller hvis du bevidst fravælger fagforening og kun vil betale for dagpengeforsikringen.",
+      "Kontingentet på 542 kr. om måneden er lidt over de billigste tværfaglige, men til gengæld betaler du ikke for en fagforeningsstruktur, du ikke bruger. Min A-kasse optager både lønmodtagere og selvstændige og har et godt ry for hurtig sagsbehandling og korte svartider."
+    ],
+    "fordele": [
+      "Ren a-kasse uden fagforeningsbinding",
+      "Åben for alle brancher",
+      "Tager også selvstændige",
+      "Kendt for hurtig sagsbehandling"
+    ],
+    "ulemper": [
+      "Ingen fagforening tilknyttet",
+      "Ingen overenskomstdækning",
+      "Dyrere end Det Faglige Hus"
+    ],
+    "features": {
+      "fagforening": false,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": true
+    },
+    "hjemmeside": "https://minakasse.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "din-faglige-akasse",
+    "navn": "Din Faglige A-kasse",
+    "kort": "Din Faglige A-kasse",
+    "pris": 568,
+    "fagforening_tillaeg": 99,
+    "medlemmer": null,
+    "type": "tvaerfaglig",
+    "badge": null,
+    "logo": null,
+    "stiftet": 2002,
+    "maalgruppe": "Alle brancher",
+    "hvem": "Dig der leder efter et alternativ til de største tværfaglige a-kasser.",
+    "om": [
+      "Din Faglige A-kasse er tværfaglig og optager alle uanset uddannelse og branche. Organisationen er mindre end Det Faglige Hus og Krifa, og profilen ligner: lavt fagforeningstillæg, ingen overenskomster og fokus på individuel rådgivning frem for kollektiv forhandling.",
+      "Kontingentet på 568 kr. om måneden er det højeste blandt de tværfaglige a-kasser, og det gør valget svært at forsvare rent økonomisk, når Det Faglige Hus leverer samme grundydelse for 40 kr. mindre om måneden. Vælger du Din Faglige A-kasse, bør det være på grund af konkrete ydelser eller personlig anbefaling — ikke prisen."
+    ],
+    "fordele": [
+      "Åben for alle brancher",
+      "Lavt fagforeningstillæg",
+      "Følger dig ved brancheskift",
+      "Optager selvstændige"
+    ],
+    "ulemper": [
+      "Dyreste tværfaglige a-kasse",
+      "Ingen overenskomstdækning",
+      "Mindre organisation med færre ydelser"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": true
+    },
+    "hjemmeside": "https://dinfagligeakasse.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "dsa",
+    "navn": "Din Sundhedsfaglige A-kasse (DSA)",
+    "kort": "DSA",
+    "pris": 485,
+    "fagforening_tillaeg": null,
+    "medlemmer": 100000,
+    "type": "fagspecifik",
+    "badge": "Landets laveste pris",
+    "logo": null,
+    "stiftet": 1976,
+    "maalgruppe": "Sygeplejersker, bioanalytikere, radiografer, jordemødre og andre sundhedsfaglige",
+    "hvem": "Dig med en sundhedsfaglig uddannelse — så er valget stort set givet på forhånd.",
+    "om": [
+      "DSA er Danmarks billigste a-kasse med et kontingent på 485 kr. om måneden. Prisen er mulig, fordi medlemsgruppen er homogen, ledigheden i sundhedssektoren er lav, og administrationen derfor er billig. Har du en sundhedsfaglig uddannelse, er der sjældent noget økonomisk argument for at vælge andet.",
+      "Rådgiverne kender vagtplaner, weekendtillæg, autorisationsregler og de særlige forhold ved barsel og deltid i sundhedsvæsenet. DSA optager ikke selvstændige på samme måde som de tværfaglige a-kasser, så driver du klinik eller virksomhed ved siden af, skal du undersøge reglerne grundigt, før du melder dig ind."
+    ],
+    "fordele": [
+      "Landets laveste kontingent",
+      "Rådgivere med sundhedsfaglig specialviden",
+      "Kender reglerne for vagt- og deltidsarbejde",
+      "Gratis medlemskab under uddannelsen"
+    ],
+    "ulemper": [
+      "Kun for sundhedsfaglige",
+      "Ingen fagforening i kontingentet",
+      "Begrænsede muligheder som selvstændig"
+    ],
+    "features": {
+      "fagforening": false,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.dsa.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "ajks",
+    "navn": "AJKS A-kasse",
+    "kort": "AJKS",
+    "pris": 496,
+    "fagforening_tillaeg": null,
+    "medlemmer": 22700,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1972,
+    "maalgruppe": "Journalister, kommunikationsfolk, tekstforfattere, oversættere og sprogfolk",
+    "hvem": "Dig i medie- og kommunikationsbranchen, især hvis du har freelance- eller honorarindkomst.",
+    "om": [
+      "AJKS er en lille, specialiseret a-kasse for medie-, kommunikations- og sprogområdet. Med 496 kr. om måneden er den blandt landets billigste, og den er samtidig en af de a-kasser, der har mest rutine i freelancearbejde, honorarindkomst og B-indkomst.",
+      "Netop B-indkomst og blandede indtægtsformer er det, der oftest går galt i dagpengesager. Får du honorarer fra flere opdragsgivere, laver enkeltstående opgaver eller har et lille CVR-nummer ved siden af et lønmodtagerjob, er det værd at vælge en a-kasse, der har set den slags sager hundredvis af gange før."
+    ],
+    "fordele": [
+      "Meget lavt kontingent",
+      "Stor erfaring med freelance og B-indkomst",
+      "Kender medie- og kommunikationsbranchen",
+      "Personlig kontakt i en lille organisation"
+    ],
+    "ulemper": [
+      "Kræver relevant uddannelse eller beskæftigelse",
+      "Ingen lokale afdelinger i hele landet",
+      "Snæver målgruppe hvis du skifter branche"
+    ],
+    "features": {
+      "fagforening": false,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://ajks.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "akademikernes",
+    "navn": "Akademikernes A-kasse (AKA)",
+    "kort": "Akademikernes",
+    "pris": 499,
+    "fagforening_tillaeg": null,
+    "medlemmer": 275000,
+    "type": "fagspecifik",
+    "badge": "Størst for akademikere",
+    "logo": null,
+    "stiftet": 1975,
+    "maalgruppe": "Studerende og færdiguddannede med en videregående uddannelse",
+    "hvem": "Dig med en videregående uddannelse — bachelor, professionsbachelor, kandidat eller ph.d.",
+    "om": [
+      "Akademikernes A-kasse er Danmarks største a-kasse for højtuddannede med cirka 275.000 medlemmer, og med 499 kr. om måneden samtidig en af landets billigste. Kombinationen af lav pris og bred adgang for alle med en videregående uddannelse gør AKA til standardvalget for akademikere.",
+      "A-kassen optager både lønmodtagere og selvstændige, og karriererådgivningen er skruet sammen til akademiske jobsøgninger med ansøgningssparring, CV-tjek og netværksforløb. AKA har også et stort dimittendberedskab, fordi en stor del af medlemmerne kommer direkte fra universitetet. Fagforening er ikke inkluderet — den køber du separat hos for eksempel DM, IDA eller Djøf."
+    ],
+    "fordele": [
+      "Meget lavt kontingent i forhold til ydelserne",
+      "Stærk karriere- og CV-rådgivning",
+      "Gratis studiemedlemskab under uddannelsen",
+      "Optager også selvstændige"
+    ],
+    "ulemper": [
+      "Kræver videregående uddannelse",
+      "Fagforening skal købes separat",
+      "Stor organisation med mindre personlig kontakt"
+    ],
+    "features": {
+      "fagforening": false,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.aka.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "laerernes",
+    "navn": "Lærernes A-kasse (DLFA)",
+    "kort": "Lærernes",
+    "pris": 503,
+    "fagforening_tillaeg": null,
+    "medlemmer": 76000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1953,
+    "maalgruppe": "Lærere og undervisere fra folkeskole til gymnasium, efterskole og friskole",
+    "hvem": "Dig der underviser — også som vikar, årsvikar eller på deltid.",
+    "om": [
+      "Lærernes A-kasse er bygget op om undervisningsområdet og koster 503 kr. om måneden, hvilket placerer den blandt de fem billigste i landet. A-kassen kender skoleårets rytme og de tidsbegrænsede ansættelser, der er så almindelige på området.",
+      "Det er især relevant, hvis du er årsvikar eller arbejder på flere skoler. Reglerne om supplerende dagpenge, ferielukning og opgørelse af løntimer bliver hurtigt komplicerede, når din ansættelse følger et skoleår frem for en kalendermåned, og her betaler specialiseringen sig."
+    ],
+    "fordele": [
+      "Lavt kontingent",
+      "Specialviden om undervisningsområdet",
+      "Vant til vikar- og årsnormsansættelser",
+      "Gratis for lærerstuderende"
+    ],
+    "ulemper": [
+      "Kun for undervisere",
+      "Snæver målgruppe hvis du skifter branche",
+      "Fagforening skal købes separat"
+    ],
+    "features": {
+      "fagforening": false,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.dlfa.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "socialpaedagogerne",
+    "navn": "Socialpædagogernes A-kasse",
+    "kort": "Socialpædagogerne",
+    "pris": 507,
+    "fagforening_tillaeg": null,
+    "medlemmer": 40000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1981,
+    "maalgruppe": "Socialpædagoger og ansatte på bo-, døgn- og specialtilbud",
+    "hvem": "Dig der arbejder socialpædagogisk med udsatte børn, unge eller voksne.",
+    "om": [
+      "Socialpædagogernes A-kasse hører under fagforbundet SL og koster 507 kr. om måneden. Den henvender sig til socialpædagogisk arbejde på bosteder, døgninstitutioner og specialområdet.",
+      "Rådgivningen er tæt koblet til arbejdsmiljø, vold og trusler på arbejdspladsen samt skæve arbejdstider — emner der fylder meget i faget. A-kassen har desuden rutine i sager, hvor ledighed opstår efter en arbejdsskade eller en længere sygemelding, hvilket kræver præcis koordinering mellem a-kasse, kommune og læge."
+    ],
+    "fordele": [
+      "Lavt kontingent",
+      "Specialiseret rådgivning om socialpædagogisk arbejde",
+      "Tæt kobling til fagforbund og overenskomst",
+      "Rutine i arbejdsskade- og sygdomssager"
+    ],
+    "ulemper": [
+      "Kræver relevant uddannelse eller beskæftigelse",
+      "Ikke relevant hvis du skifter felt",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://sl.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "business-danmark",
+    "navn": "Business Danmark A-kasse",
+    "kort": "Business Danmark",
+    "pris": 524,
+    "fagforening_tillaeg": null,
+    "medlemmer": 25000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1918,
+    "maalgruppe": "Sælgere, key account managere og andre i salg og marketing",
+    "hvem": "Dig der har provision, bonus eller firmabil som del af lønnen.",
+    "om": [
+      "Business Danmark samler salgs- og marketingfolk og koster 524 kr. om måneden inklusive fagforening. Det gør den til en af de billigste løsninger, hvis du både vil have a-kasse og faglig dækning i ét medlemskab.",
+      "Den største fordel er specialviden om provisionsløn, bonus og firmabil. Netop de lønelementer gør en dagpengeberegning kompliceret, fordi det har stor betydning, hvordan de er indberettet til indkomstregistret. En forkert håndteret bonus kan koste tusindvis af kroner i en dagpengesats, og her betaler den branchespecifikke rådgivning sig hurtigt."
+    ],
+    "fordele": [
+      "Ekspertise i provision, bonus og firmabil",
+      "Fagforening og a-kasse samlet i ét kontingent",
+      "Netværk og lønstatistik i salgsbranchen",
+      "Juridisk hjælp til ansættelseskontrakter"
+    ],
+    "ulemper": [
+      "Snæver målgruppe",
+      "Ikke relevant uden for salg og marketing",
+      "Mellemhøjt kontingent"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.businessdanmark.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "hk",
+    "navn": "HK's A-kasse",
+    "kort": "HK",
+    "pris": 530,
+    "fagforening_tillaeg": 510,
+    "medlemmer": 180000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1900,
+    "maalgruppe": "Kontor, handel, it, laborant og kommunale HK-områder",
+    "hvem": "Dig i en administrativ eller merkantil stilling, især på en overenskomstdækket arbejdsplads.",
+    "om": [
+      "HK dækker en meget bred del af det administrative og merkantile arbejdsmarked og koster 530 kr. om måneden for a-kassen alene. Fagforeningsdelen koster omkring 510 kr. ekstra, hvilket er markant mere end hos de tværfaglige alternativer.",
+      "Forskellen ligger i, hvad du får. HK forhandler overenskomster, stiller tillidsrepræsentanter og fører sager mod arbejdsgivere. Er du ansat under en HK-overenskomst, får du reel værdi for fagforeningskontingentet. Bruger du kun a-kassedelen, betaler du 2 kr. mere om måneden end hos Det Faglige Hus for den samme lovbestemte dagpengeret."
+    ],
+    "fordele": [
+      "Bred dækning af kontor-, handels- og it-området",
+      "Stærk overenskomstdækning og tillidsmandssystem",
+      "Mange lokale afdelinger i hele landet",
+      "Stort kursus- og efteruddannelsesudbud"
+    ],
+    "ulemper": [
+      "Dyrt fagforeningstillæg på cirka 510 kr./md.",
+      "Prisen steg mere end statsbidraget i 2026",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.hk.dk/akasse",
+    "affiliate_url": null
+  },
+  {
+    "slug": "foa",
+    "navn": "FOA's A-kasse",
+    "kort": "FOA",
+    "pris": 534,
+    "fagforening_tillaeg": null,
+    "medlemmer": 173000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1899,
+    "maalgruppe": "SOSU, pædagogmedhjælpere, teknisk service, brand og redning",
+    "hvem": "Dig der arbejder i offentlig service — pleje, omsorg, teknisk service eller beredskab.",
+    "om": [
+      "FOA organiserer store dele af den offentlige service og har cirka 173.000 medlemmer i a-kassen. Kontingentet på 534 kr. om måneden gælder a-kassedelen, mens fagforeningskontingentet afhænger af, hvilken afdeling og faggruppe du hører til.",
+      "A-kassen kender vagtplaner, deltidsansættelser og de kommunale overenskomster indgående. Det er vigtigt, fordi mange på området er ansat på nedsat tid og supplerer med vagter — en konstruktion der kræver præcis opgørelse af løntimer, hvis du senere skal have beregnet en dagpengesats."
+    ],
+    "fordele": [
+      "Stor viden om offentlige arbejdspladser",
+      "Hjælp til deltids- og vagtarbejde",
+      "Landsdækkende afdelinger",
+      "Stærk overenskomstdækning i kommunerne"
+    ],
+    "ulemper": [
+      "Fagforeningskontingent afhænger af afdeling",
+      "Målrettet bestemte faggrupper",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.foa.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "bupl",
+    "navn": "BUPL-A",
+    "kort": "BUPL-A",
+    "pris": 536,
+    "fagforening_tillaeg": null,
+    "medlemmer": 60000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1973,
+    "maalgruppe": "Pædagoger og pædagogstuderende",
+    "hvem": "Dig der er uddannet pædagog eller er i gang med pædagoguddannelsen.",
+    "om": [
+      "BUPL-A er a-kassen for pædagogområdet og koster 536 kr. om måneden. Den følger dig fra praktik og studietid til fastansættelse, og den har stor rutine i dimittendsager fra pædagoguddannelsen.",
+      "Det er en pointe værd at fremhæve: pædagoger dimitterer typisk i store hold to gange om året, og a-kassen er derfor gearet til at håndtere mange dimittendansøgninger samtidig. Meld dig ind senest 14 dage efter, du er færdig, ellers mister du retten til dagpenge på dimittendsats."
+    ],
+    "fordele": [
+      "Specialiseret i pædagogområdet",
+      "Stor rutine i dimittendsager",
+      "Gratis medlemskab som pædagogstuderende",
+      "Tæt kobling til BUPL og overenskomsten"
+    ],
+    "ulemper": [
+      "Kun for pædagoger",
+      "Højere pris end de billigste fagspecifikke",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://bupl.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "lederne",
+    "navn": "Lederne A-kasse",
+    "kort": "Lederne",
+    "pris": 542,
+    "fagforening_tillaeg": null,
+    "medlemmer": 130000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": "lederne.png",
+    "stiftet": 1899,
+    "maalgruppe": "Ledere, mellemledere og specialister med lederambitioner",
+    "hvem": "Dig med personale- eller fagligt ledelsesansvar — eller dig der er på vej dertil.",
+    "om": [
+      "Lederne henvender sig til alle med personale- eller fagligt ledelsesansvar og koster 542 kr. om måneden. A-kassen og organisationen hænger tæt sammen, og rådgivningen handler lige så meget om fratrædelsesaftaler, direktørkontrakter og karriereskift som om dagpenge.",
+      "Det er relevant, fordi ledere sjældent bliver almindeligt opsagt. Typisk forhandles der en fratrædelsesaftale med fritstilling, og her har det stor betydning for dine dagpenge, hvordan aftalen er formuleret, og hvornår du reelt står til rådighed for arbejdsmarkedet. En fejl i den formulering kan udskyde dine dagpenge i måneder."
+    ],
+    "fordele": [
+      "Specialiseret ledersparring og karriererådgivning",
+      "Juridisk hjælp til fratrædelsesaftaler og kontrakter",
+      "Optager også selvstændige",
+      "Stort lederudviklingsudbud og netværk"
+    ],
+    "ulemper": [
+      "Prisen steg mere end statsbidraget i 2026",
+      "Mindre relevant uden ledelsesambition",
+      "Ingen klassisk overenskomstdækning"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.lederne.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "ma",
+    "navn": "MA – Magistrenes A-kasse",
+    "kort": "MA",
+    "pris": 544,
+    "fagforening_tillaeg": null,
+    "medlemmer": 90000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1971,
+    "maalgruppe": "Kandidater fra universiteterne, især humaniora og naturvidenskab",
+    "hvem": "Dig med en universitetsuddannelse, især hvis du er dimittend eller projektansat.",
+    "om": [
+      "MA er specialiseret i universitetsuddannede og koster 544 kr. om måneden. Blandt medlemmerne er mange dimittender og projektansatte, og a-kassen har derfor et stort udbud af kurser, jobsøgningsforløb og karriereforløb målrettet netop den situation.",
+      "MA ligger 45 kr. over Akademikernes A-kasse for en sammenlignelig målgruppe. Merprisen giver mening, hvis du bruger kursusudbuddet aktivt — særligt som ledig dimittend, hvor et struktureret forløb kan afkorte ledigheden. Bruger du ikke ydelserne, betaler du 540 kr. mere om året for den samme dagpengeret."
+    ],
+    "fordele": [
+      "Stort udbud af kurser og jobsøgningsforløb",
+      "Rutine i dimittend- og projektansættelser",
+      "Gratis for studerende",
+      "Optager også selvstændige"
+    ],
+    "ulemper": [
+      "Kræver universitetsuddannelse",
+      "Dyrere end Akademikernes A-kasse",
+      "Fagforening skal købes separat"
+    ],
+    "features": {
+      "fagforening": false,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://ma-kasse.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "3f",
+    "navn": "Faglig Fælles A-kasse (3F)",
+    "kort": "3F",
+    "pris": 552,
+    "fagforening_tillaeg": 472,
+    "medlemmer": 269000,
+    "type": "fagspecifik",
+    "badge": "Flest medlemmer",
+    "logo": null,
+    "stiftet": 2005,
+    "maalgruppe": "Bygge og anlæg, transport, industri, service og grønne områder",
+    "hvem": "Dig i et faglært eller ufaglært job på en overenskomstdækket arbejdsplads.",
+    "om": [
+      "3F er Danmarks største fagforening og a-kasse med cirka 269.000 medlemmer i a-kassen. Kontingentet på 552 kr. om måneden dækker a-kassen alene, mens et kombineret medlemskab af fagforening og a-kasse koster omkring 1.024 kr. om måneden.",
+      "Det er en stor forskel til de tværfaglige alternativer, og den skal ses i lyset af, hvad du får: overenskomstdækning, konfliktunderstøttelse ved strejke og lockout, juridisk hjælp ved arbejdsskader og lokale afdelinger med tillidsrepræsentanter. På arbejdspladser med overenskomst er 3F ofte det økonomisk rigtige valg, selvom listeprisen er højere."
+    ],
+    "fordele": [
+      "Meget stærk overenskomstdækning",
+      "Konfliktunderstøttelse ved strejke og lockout",
+      "Hjælp ved arbejdsskader og arbejdsmiljøsager",
+      "Afdelinger i hele landet"
+    ],
+    "ulemper": [
+      "Højt samlet kontingent med fagforening",
+      "Højere a-kassepris end de billigste",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.3f.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "bfa",
+    "navn": "Byggefagenes A-kasse (BFA)",
+    "kort": "BFA",
+    "pris": 553,
+    "fagforening_tillaeg": null,
+    "medlemmer": 30000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1975,
+    "maalgruppe": "Tømrere, murere, malere, gulvlæggere og andre byggefag",
+    "hvem": "Dig i byggeriet, hvor arbejdet svinger med sæson og projekter.",
+    "om": [
+      "BFA er byggefagenes egen a-kasse og koster 553 kr. om måneden. Den kender sæsonledighed, akkordarbejde og hjemsendelser — forhold der gør dagpengesager i byggeriet særlige.",
+      "Hjemsendelse på grund af vejrlig eller materialemangel er et godt eksempel. Reglerne for G-dage, karensdage og supplerende dagpenge er anderledes, når du formelt stadig er ansat, men ikke har arbejde. En a-kasse, der ser den slags sager hver vinter, laver færre fejl end en, der ser dem sjældent."
+    ],
+    "fordele": [
+      "Kender sæsonledighed, akkord og hjemsendelser",
+      "Tæt på byggefagenes forbund og overenskomster",
+      "Rutine i G-dage og supplerende dagpenge",
+      "Stærk på lærlinge og svendeprøver"
+    ],
+    "ulemper": [
+      "Kun for byggefagene",
+      "Kontingent i den høje ende",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://bf-a.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "teknisk-landsforbund",
+    "navn": "Teknisk Landsforbunds A-kasse (TL)",
+    "kort": "TL",
+    "pris": 553,
+    "fagforening_tillaeg": null,
+    "medlemmer": 25000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1919,
+    "maalgruppe": "Tekniske designere, konstruktører, bygningskonstruktører og designere",
+    "hvem": "Dig på en tegnestue, hos en rådgiver eller i en teknisk designfunktion.",
+    "om": [
+      "TL samler tekniske designere, konstruktører og beslægtede faggrupper og koster 553 kr. om måneden. A-kassen har erfaring med de projektbaserede ansættelser, der præger rådgiver- og tegnestuebranchen.",
+      "Projektansættelser betyder skiftende perioder med og uden arbejde, og det stiller krav til dokumentation af løntimer og til timingen af din indmeldelse hos jobcentret. TL har desuden et kursusudbud målrettet tekniske programmer og certificeringer, hvilket kan være direkte jobskabende i en ledighedsperiode."
+    ],
+    "fordele": [
+      "Specialiseret i tekniske designfag",
+      "Vant til projektansættelser og skiftende arbejde",
+      "Kurser i tekniske programmer og certificeringer",
+      "Fagforening inkluderet"
+    ],
+    "ulemper": [
+      "Snæver målgruppe",
+      "Kontingent i den høje ende",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.tl.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "dansk-metal",
+    "navn": "Metals A-kasse",
+    "kort": "Dansk Metal",
+    "pris": 554,
+    "fagforening_tillaeg": null,
+    "medlemmer": 95000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1888,
+    "maalgruppe": "Smede, mekanikere, industriteknikere, elektronikfagteknikere og it-supportere",
+    "hvem": "Dig i industrien, på et værksted eller i en teknisk supportfunktion.",
+    "om": [
+      "Metals A-kasse dækker industri- og metalområdet samt dele af it-branchen og koster 554 kr. om måneden. Dansk Metal har stærk overenskomstdækning i industrien og et af landets største efteruddannelsesudbud for faglærte.",
+      "Efteruddannelse er ikke et bonuspunkt i denne branche — det er kernen. Industrien automatiserer hurtigt, og adgangen til opkvalificering under ledighed kan være forskellen på at komme tilbage i et tilsvarende job eller at skulle skifte fag. Metal har desuden en stærk position på lærlinge- og elevområdet."
+    ],
+    "fordele": [
+      "Stærk overenskomstdækning i industrien",
+      "Stort udbud af efteruddannelse for faglærte",
+      "Lærlinge og elever er godt dækket",
+      "Lokale afdelinger med tillidsrepræsentanter"
+    ],
+    "ulemper": [
+      "Kun for forbundets fagområder",
+      "Kontingent i den høje ende",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.danskmetal.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "ca",
+    "navn": "CA A-kasse",
+    "kort": "CA",
+    "pris": 561,
+    "fagforening_tillaeg": null,
+    "medlemmer": 65000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": "ca.png",
+    "stiftet": 1974,
+    "maalgruppe": "Erhvervsøkonomer, HD'ere, cand.merc.'er og ledere i det private",
+    "hvem": "Dig med en erhvervsøkonomisk profil i det private erhvervsliv.",
+    "om": [
+      "CA henvender sig til erhvervsøkonomiske profiler i det private erhvervsliv og koster 561 kr. om måneden inklusive fagforening. Det er blandt landets højeste a-kassekontingenter, men pakken indeholder karrierecoaching, lønstatistik, juridisk rådgivning og et stort netværk.",
+      "CA's lønstatistik er værd at fremhæve, fordi den er detaljeret nok til at bruge i en konkret lønforhandling. For en profil med en løn i den høje ende kan en enkelt vellykket forhandling nemt dække flere års kontingent — og det er reelt sådan, prisen skal vurderes, ikke som en ren dagpengeforsikring."
+    ],
+    "fordele": [
+      "Stærk karrierecoaching og individuel sparring",
+      "Detaljeret lønstatistik til forhandling",
+      "Fagforening og juridisk rådgivning inkluderet",
+      "Målrettet det private erhvervsliv"
+    ],
+    "ulemper": [
+      "Blandt de dyreste a-kasser",
+      "Kræver relevant uddannelse eller stilling",
+      "Ingen overenskomstdækning"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": true,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.ca.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "nnf",
+    "navn": "NNF's A-kasse",
+    "kort": "NNF",
+    "pris": 568,
+    "fagforening_tillaeg": 394,
+    "medlemmer": 20000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1899,
+    "maalgruppe": "Slagtere, bagere, mejerister og ansatte i fødevareindustrien",
+    "hvem": "Dig i fødevareproduktion — slagteri, bageri, mejeri eller fødevarefabrik.",
+    "om": [
+      "Fødevareforbundet NNF dækker fødevareindustrien fra slagteri til bageri og har cirka 20.000 medlemmer. A-kassen koster 568 kr. om måneden, og et samlet medlemskab af fagforening og a-kasse ligger omkring 962 kr.",
+      "Organisationen er lille, men det er en fordel i praksis: du taler med mennesker, der kender de konkrete virksomheder og overenskomster på området. Ved store afskedigelsesrunder på en fødevarefabrik er det ofte den samme afdeling, der håndterer alle sagerne samlet, hvilket giver hurtigere behandling."
+    ],
+    "fordele": [
+      "Specialiseret i fødevareindustrien",
+      "Tæt på områdets overenskomster",
+      "Personlig kontakt i en lille organisation",
+      "Erfaring med store afskedigelsesrunder"
+    ],
+    "ulemper": [
+      "Højt kontingent",
+      "Meget snæver målgruppe",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://www.nnf.dk/",
+    "affiliate_url": null
+  },
+  {
+    "slug": "dansk-el-forbund",
+    "navn": "Dansk El-Forbunds A-kasse",
+    "kort": "Dansk El-Forbund",
+    "pris": 568,
+    "fagforening_tillaeg": null,
+    "medlemmer": 30000,
+    "type": "fagspecifik",
+    "badge": null,
+    "logo": null,
+    "stiftet": 1904,
+    "maalgruppe": "Elektrikere, elektronikfagteknikere og lærlinge i elfaget",
+    "hvem": "Dig i elfaget — som montør, servicetekniker eller lærling.",
+    "om": [
+      "Dansk El-Forbund samler elektrikerfaget og har egen a-kasse til 568 kr. om måneden. De kender projektarbejde, montørordninger og de perioder, hvor byggeriet står stille.",
+      "Elfaget er tæt koblet til byggeriets konjunkturer, og ledigheden svinger derfor mere end i mange andre fag. Det taler for en a-kasse, der er vant til hyppige ind- og udmeldinger af ledighed, og som kan rådgive om, hvornår det bedst kan betale sig at tage kortere opgaver frem for at forblive på fulde dagpenge."
+    ],
+    "fordele": [
+      "Specialiseret i elfaget",
+      "Godt greb om lærlinge og elever",
+      "Kender byggeriets sæsonudsving",
+      "Autorisations- og efteruddannelseskurser"
+    ],
+    "ulemper": [
+      "Højt kontingent",
+      "Kun for elfaget",
+      "Optager ikke selvstændige"
+    ],
+    "features": {
+      "fagforening": true,
+      "loensikring": true,
+      "selvstaendige": false,
+      "gratis_studie": true,
+      "efterloen": true,
+      "aaben_for_alle": false
+    },
+    "hjemmeside": "https://def.dk/",
+    "affiliate_url": null
+  }
+]
