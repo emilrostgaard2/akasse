@@ -32,7 +32,7 @@
   "nav": [
     {
       "titel": "Sammenlign priser",
-      "url": "/sammenlign/"
+      "url": "/#pristabel"
     },
     {
       "titel": "Billigste a-kasse",
@@ -59,7 +59,7 @@
         },
         {
           "titel": "Dagpenge som nyuddannet",
-          "url": "/dimittend-dagpenge/",
+          "url": "/dagpenge-nyuddannet/",
           "tekst": "Dimittendsats og frister"
         },
         {

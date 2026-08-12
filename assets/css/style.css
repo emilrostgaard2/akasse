@@ -31,7 +31,7 @@
 
   --display: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Segoe UI Mono', Menlo, Consolas, monospace;
 
   --maks: 1160px;
   --maks-artikel: 960px;
@@ -42,11 +42,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { overflow-x: hidden; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 92px; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 body {
   margin: 0;
-  overflow-x: hidden;
   font-family: var(--display);
   font-size: 17px;
   line-height: 1.6;
@@ -1363,3 +1362,23 @@ table.data .c-score { width: 98px; }
 .toc-liste { padding: 0 18px 16px; column-width: 230px; column-gap: 24px; }
 .toc-liste li { margin-bottom: 5px; font-size: .86rem; line-height: 1.4; }
 .toc-liste li::before { font-size: .7rem; margin-right: 7px; }
+
+/* ---------------------------------------------- kildeblok (EEAT) */
+.kilder {
+  margin: 2.4em 0 0; padding: 22px 24px;
+  background: var(--papir-2); border: 1px solid var(--linje);
+  border-radius: var(--r-m); font-family: var(--display);
+}
+.kilder-titel { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; font-weight: 700; }
+.kilder-intro { font-size: .87rem; color: var(--ink-blod); margin: 0 0 12px; line-height: 1.55; }
+.kilder-liste { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 7px; }
+.kilder-liste li { font-size: .84rem; color: var(--muted); line-height: 1.45; padding-left: 18px; position: relative; }
+.kilder-liste li::before { content: '↗'; position: absolute; left: 0; color: var(--akcent); font-size: .8em; top: 2px; }
+.kilder-liste a { font-weight: 600; }
+.kilder-fod { font-size: .8rem; color: var(--muted); margin: 0; padding-top: 12px; border-top: 1px solid var(--linje); line-height: 1.5; }
+
+/* ---------------------------------------------- ydeevne: spring rendering af indhold under folden over */
+.sektion--lys, .sektion--liste, .site-fod, .relaterede, .kilder {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
+}

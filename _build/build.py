@@ -35,6 +35,7 @@ GNS = round(sum(a["pris"] for a in AKASSER) / len(AKASSER))
 SPREDNING = DYREST["pris"] - BILLIGST["pris"]
 AARLIG_FORSKEL = SPREDNING * 12
 
+VERSION = "7"
 SIDER = []  # (url, prioritet, aendret)
 
 
@@ -55,8 +56,10 @@ def efter_fradrag(pris):
 
 def logo_html(a, klasse="logo"):
     if a.get("logo"):
+        b, h = a.get("logo_b", 120), a.get("logo_h", 48)
         return (f'<img class="{klasse}" src="/assets/img/logoer/{a["logo"]}" '
-                f'alt="{html.escape(a["navn"])} logo" width="120" height="48" loading="lazy" decoding="async">')
+                f'alt="{html.escape(a["navn"])} logo" width="{b}" height="{h}" '
+                f'loading="lazy" decoding="async">')
     initialer = "".join(o[0] for o in a["kort"].split()[:2]).upper()
     return f'<span class="{klasse} logo--tekst" aria-hidden="true">{html.escape(initialer)}</span>'
 
@@ -402,7 +405,7 @@ def cta_box(titel=None, tekst=None):
   </div>
   <div class="cta-handling">
     {link_ud(BILLIGST_ALLE, f"Gå til {BILLIGST_ALLE['kort']}")}
-    <a class="knap knap--sekundaer" href="/sammenlign/">Sammenlign alle {len(AKASSER)}</a>
+    <a class="knap knap--sekundaer" href="/billigste-a-kasse/">Sammenlign alle {len(AKASSER)}</a>
   </div>
 </aside>"""
 
@@ -507,8 +510,8 @@ INTERNE_LINKS = [
     ("dagpengesatser", "/dagpengesatser/"),
     ("maksimalsatsen", "/dagpengesatser/"),
     ("beskæftigelsestillæg", "/dagpengesatser/"),
-    ("dimittendsats", "/dimittend-dagpenge/"),
-    ("nyuddannet", "/dimittend-dagpenge/"),
+    ("dimittendsats", "/dagpenge-nyuddannet/"),
+    ("nyuddannet", "/dagpenge-nyuddannet/"),
     ("gratis studiemedlemskab", "/a-kasse-studerende/"),
     ("studiemedlem", "/a-kasse-studerende/"),
     ("selvstændig", "/a-kasse-selvstaendig/"),
@@ -574,11 +577,11 @@ def relaterede(egen_url, antal=4):
         ("/a-kasse-priser/", f"A-kasse priser {AAR}", "Hvad kontingentet består af, og hvorfor priserne steg"),
         ("/skift-a-kasse/", "Skift a-kasse", "Gratis, tager fem minutter, anciennitet følger med"),
         ("/dagpengesatser/", f"Dagpengesatser {AAR}", f"Højeste sats er {kr(S['maks_fuldtid'])} kr./md."),
-        ("/dimittend-dagpenge/", "Dagpenge som nyuddannet", "Dimittendsats, 14-dages fristen og karensmåneden"),
+        ("/dagpenge-nyuddannet/", "Dagpenge som nyuddannet", "Dimittendsats, 14-dages fristen og karensmåneden"),
         ("/a-kasse-selvstaendig/", "A-kasse for selvstændige", "Reglerne ved eget CVR-nummer"),
         ("/a-kasse-studerende/", "A-kasse som studerende", "Gratis medlemskab og hvad det er værd"),
         ("/dagpengeberegner/", "Dagpengeberegner", "Beregn din sats og dækningsgrad"),
-        ("/sammenlign/", f"Sammenlign alle {len(AKASSER)}", "Filtrér på pris, adgang og selvstændige"),
+        ("/billigste-a-kasse/", f"Sammenlign alle {len(AKASSER)}", "Filtrér på pris, adgang og selvstændige"),
     ]
     valg = [x for x in alle if x[0] != egen_url][:antal]
     kort = "".join(
@@ -651,6 +654,22 @@ def forfatterboks():
 </aside>"""
 
 
+def kilder(opdateret):
+    return f"""
+<section class="kilder" aria-labelledby="kilder-titel">
+  <h2 class="kilder-titel" id="kilder-titel">Kilder og metode</h2>
+  <p class="kilder-intro">Priser er hentet hos a-kassernes egne offentliggjorte prislister. Satser, indkomstkrav og regler følger myndighedernes officielle vejledninger. Vi kopierer ikke tal fra andre sammenligningssider.</p>
+  <ul class="kilder-liste">
+    <li><a href="https://star.dk/" rel="nofollow noopener" target="_blank">Styrelsen for Arbejdsmarked og Rekruttering (STAR)</a> — regler om dagpenge, rådighed og optjening</li>
+    <li><a href="https://bm.dk/" rel="nofollow noopener" target="_blank">Beskæftigelsesministeriet</a> — satsvejledning med årets dagpengesatser</li>
+    <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge" rel="nofollow noopener" target="_blank">borger.dk</a> — offentlig vejledning om dagpenge og a-kasse</li>
+    <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skattestyrelsen</a> — fradragsregler for a-kasse- og fagforeningskontingent</li>
+    <li>A-kassernes egne prislister, senest kontrolleret {opdateret}</li>
+  </ul>
+  <p class="kilder-fod">Gennemgået og faktatjekket af <a href="/om/emil-rostgaard/">Emil Rostgaard</a> den <time datetime="{opdateret}">{opdateret}</time>. Se vores <a href="/redaktionelle-principper/">redaktionelle principper</a> for, hvordan vi arbejder med tal og rettelser.</p>
+</section>"""
+
+
 def brodkrumme(sti):
     """sti: liste af (titel, url|None)"""
     dele = ['<li><a href="/">Forside</a></li>']
@@ -693,7 +712,7 @@ def nav_html(aktiv):
 
 
 def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
-         hero=None, opdateret=None, prioritet="0.7", noindex=False):
+         hero=None, opdateret=None, prioritet="0.7", noindex=False, preload=""):
     """Skriver en HTML-side til disk."""
     kanonisk = DOMAENE + url
     jsonld = [j for j in (jsonld or []) if j]
@@ -704,7 +723,7 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
       <div class="fod-kol">
         <h2 class="fod-titel">Sammenlign</h2>
         <ul>
-          <li><a href="/sammenlign/">Alle a-kasser og priser</a></li>
+          <li><a href="/billigste-a-kasse/">Alle a-kasser og priser</a></li>
           <li><a href="/billigste-a-kasse/">Billigste a-kasse {AAR}</a></li>
           <li><a href="/a-kasse-priser/">A-kasse priser {AAR}</a></li>
           <li><a href="/a-kasser/">Oversigt over a-kasser</a></li>
@@ -716,7 +735,7 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
         <ul>
           <li><a href="/skift-a-kasse/">Skift a-kasse</a></li>
           <li><a href="/dagpengesatser/">Dagpengesatser {AAR}</a></li>
-          <li><a href="/dimittend-dagpenge/">Dagpenge som nyuddannet</a></li>
+          <li><a href="/dagpenge-nyuddannet/">Dagpenge som nyuddannet</a></li>
           <li><a href="/a-kasse-selvstaendig/">A-kasse for selvstændige</a></li>
           <li><a href="/a-kasse-studerende/">A-kasse som studerende</a></li>
         </ul>
@@ -756,8 +775,9 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
 <meta name="theme-color" content="#0d4f47">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=6">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="/assets/css/style.min.css?v={VERSION}">
+{preload}
 {ld_html}
 </head>
 <body class="{klasse}">
@@ -779,7 +799,7 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
     <nav class="hoved-nav" id="hovedmenu" aria-label="Hovedmenu">
       <ul>{nav_html(aktiv)}</ul>
     </nav>
-    <a class="hoved-cta" href="/sammenlign/">Find din a-kasse</a>
+    <a class="hoved-cta" href="/billigste-a-kasse/">Find din a-kasse</a>
   </div>
 </header>
 {hero or ''}
@@ -805,7 +825,7 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
     <p class="fod-disclaimer">AkasseMatch indeholder annoncelinks. Klikker du videre til en a-kasse, kan vi modtage en kommission. Det påvirker ikke priserne for dig og ikke rækkefølgen i vores tabeller, som altid sorteres efter pris. Indholdet er generel information og erstatter ikke individuel rådgivning fra din a-kasse.</p>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=6" defer></script>
+<script src="/assets/js/site.min.js?v={VERSION}" defer></script>
 </body>
 </html>"""
 
@@ -824,28 +844,54 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
 
 
 def artikel_jsonld(url, titel, beskrivelse, opdateret):
+    forfatter = {
+        "@type": "Person",
+        "name": "Emil Rostgaard",
+        "url": DOMAENE + "/om/emil-rostgaard/",
+        "jobTitle": "Ansvarshavende redaktør",
+        "sameAs": ["https://www.linkedin.com/in/emil-rostgaard-702809195/"],
+    }
+    udgiver = {
+        "@type": "Organization",
+        "name": SITE["navn"],
+        "url": DOMAENE + "/",
+        "logo": {"@type": "ImageObject", "url": DOMAENE + "/assets/img/favicon.svg"},
+    }
     return json.dumps({
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": titel[:110],
-        "description": beskrivelse,
-        "inLanguage": "da-DK",
-        "datePublished": "2026-01-15",
-        "dateModified": opdateret or SITE["opdateret"],
-        "mainEntityOfPage": {"@type": "WebPage", "@id": DOMAENE + url},
-        "author": {
-            "@type": "Person",
-            "name": "Emil Rostgaard",
-            "url": DOMAENE + "/om/emil-rostgaard/",
-            "jobTitle": "Ansvarshavende redaktør",
-            "sameAs": ["https://www.linkedin.com/in/emil-rostgaard-702809195/"],
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": SITE["navn"],
-            "url": DOMAENE + "/",
-            "logo": {"@type": "ImageObject", "url": DOMAENE + "/assets/img/favicon.svg"},
-        },
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": DOMAENE + url + "#artikel",
+                "headline": titel[:110],
+                "description": beskrivelse,
+                "inLanguage": "da-DK",
+                "datePublished": "2026-01-15",
+                "dateModified": opdateret or SITE["opdateret"],
+                "mainEntityOfPage": {"@id": DOMAENE + url + "#side"},
+                "author": forfatter,
+                "publisher": udgiver,
+                "about": [
+                    {"@type": "Thing", "name": "A-kasse"},
+                    {"@type": "Thing", "name": "Dagpenge"},
+                    {"@type": "Thing", "name": "Arbejdsløshedsforsikring"},
+                ],
+                "citation": [
+                    {"@type": "CreativeWork", "name": "Beskæftigelsesministeriets satsvejledning", "url": "https://bm.dk/"},
+                    {"@type": "CreativeWork", "name": "Styrelsen for Arbejdsmarked og Rekruttering", "url": "https://star.dk/"},
+                ],
+            },
+            {
+                "@type": "WebPage",
+                "@id": DOMAENE + url + "#side",
+                "url": DOMAENE + url,
+                "name": titel,
+                "inLanguage": "da-DK",
+                "isPartOf": {"@type": "WebSite", "@id": DOMAENE + "/#website"},
+                "lastReviewed": opdateret or SITE["opdateret"],
+                "reviewedBy": forfatter,
+            },
+        ],
     }, ensure_ascii=False)
 
 
@@ -927,6 +973,7 @@ def byg_artikel(sti):
     {toc}
     {krop}
   </article>
+  {kilder(opdateret)}
   {forfatterboks()}
   {cta_box()}
   {relaterede(url)}
@@ -939,6 +986,11 @@ def byg_artikel(sti):
 
 
 # ---------------------------------------------------------------- a-kasse-sider
+
+def variant(a, muligheder):
+    """Vælger deterministisk en formulering ud fra slug, så de 24 sider ikke bliver enslydende."""
+    return muligheder[sum(ord(c) for c in a["slug"]) % len(muligheder)]
+
 
 def byg_akasse(a):
     url = f"/a-kasser/{a['slug']}/"
@@ -1043,8 +1095,16 @@ def byg_akasse(a):
     {spec}
 
     <h2>Hvad får du for kontingentet?</h2>
-    <p>Grundydelsen er den samme i alle a-kasser: retten til dagpenge, hvis du bliver ledig, og den lovpligtige rådgivning og opfølgning, som følger med. Cirka {S['statsbidrag_atp']} kr. af dit månedlige kontingent går direkte videre til staten som statsbidrag og ATP. De resterende {a['pris'] - S['statsbidrag_atp']} kr. dækker a-kassens egen administration og de ydelser, den vælger at tilbyde oveni.</p>
-    <p>Hos {html.escape(a['kort'])} betyder det konkret {html.escape(a['maalgruppe'].lower())} som primær målgruppe, {'mulighed for at tilkøbe lønsikring' if a['features']['loensikring'] else 'ingen tilkøbsmulighed for lønsikring'} og {'gratis medlemskab under uddannelsen' if a['features']['gratis_studie'] else 'almindeligt kontingent for studerende'}. {ff_tekst}</p>
+    <p>{variant(a, [
+      f"Retten til dagpenge er lovbestemt og identisk overalt. Det, du reelt køber ud over den, er {html.escape(a['kort'])}s administration, rådgivning og de ydelser, de vælger at lægge oveni.",
+      f"Alle a-kasser leverer den samme lovbestemte kerne: dagpengeret, rådighedssamtaler og opfølgning. Forskellen på {html.escape(a['kort'])} og de øvrige ligger i alt det, der kommer oveni.",
+      f"Grundproduktet er ens hos alle {len(AKASSER)} a-kasser, fordi det er fastlagt i lovgivningen. Det interessante ved {html.escape(a['kort'])} er derfor, hvad de lægger til — og hvad de tager for det.",
+    ])} Af de {a['pris']} kr. går {S['statsbidrag_atp']} kr. videre til staten som statsbidrag og ATP, mens {a['pris'] - S['statsbidrag_atp']} kr. bliver hos a-kassen selv.</p>
+    <p>{variant(a, [
+      f"Konkret betyder det {html.escape(a['maalgruppe'].lower())} som primær målgruppe",
+      f"I praksis er tilbuddet skruet sammen om {html.escape(a['maalgruppe'].lower())}",
+      f"Ydelserne er målrettet {html.escape(a['maalgruppe'].lower())}",
+    ])}, {'mulighed for at tilkøbe lønsikring' if a['features']['loensikring'] else 'ingen mulighed for at tilkøbe lønsikring'} og {'gratis medlemskab under uddannelsen' if a['features']['gratis_studie'] else 'almindeligt kontingent for studerende'}. {ff_tekst}</p>
 
     <h2>Hvad koster {html.escape(a['kort'])} på lang sigt?</h2>
     <p>Et a-kassemedlemskab er en langvarig udgift, og det er derfor værd at se prisen over mere end en måned. Tabellen viser, hvad {html.escape(a['kort'])} koster over tid — både i listepris og i den reelle udgift, når skattefradraget er trukket fra.</p>
@@ -1063,14 +1123,21 @@ def byg_akasse(a):
     <p>Beregningen bruger en marginalskat på 31 procent og forudsætter uændrede priser. I praksis reguleres kontingenterne hvert år pr. 1. januar, primært fordi statsbidraget ændrer sig politisk. Tallene skal derfor læses som en sammenligning mellem a-kasser — ikke som en præcis fremskrivning.</p>
 
     <h2>Sådan er prisen sammensat</h2>
-    <p>Af de {a['pris']} kr., du betaler hver måned til {html.escape(a['kort'])}, går {S['statsbidrag_atp']} kr. direkte videre til staten som statsbidrag og ATP-bidrag. Den del er politisk fastsat og fuldstændig ens i alle danske a-kasser — ingen a-kasse kan konkurrere på den.</p>
-    <p>Tilbage bliver {a['pris'] - S['statsbidrag_atp']} kr. om måneden, som er {html.escape(a['kort'])}s eget administrationsbidrag. Det dækker sagsbehandlere, rådgivning, kurser, it-systemer og medlemsservice. Det er reelt kun her, a-kasserne adskiller sig prismæssigt fra hinanden — og det sætter forskellen i perspektiv: hvor {html.escape(BILLIGST_ALLE['kort'])} bruger {BILLIGST_ALLE['pris'] - S['statsbidrag_atp']} kr. på administration, bruger {html.escape(a['kort'])} {a['pris'] - S['statsbidrag_atp']} kr.</p>
-    <p>Hele kontingentet er fradragsberettiget, og {html.escape(a['kort'])} indberetter automatisk beløbet til Skattestyrelsen. Du skal altså ikke selv gøre noget for at få fradraget med på årsopgørelsen.</p>
+    <p>{variant(a, [
+      f"Prisen på {html.escape(a['kort'])} kan deles i to: en lovbestemt del og en del, a-kassen selv fastsætter.",
+      f"Kontingentet på {a['pris']} kr. er ikke ét beløb, men to lagt sammen.",
+      f"For at vurdere om {a['pris']} kr. er meget, skal beløbet skilles ad.",
+    ])} {S['statsbidrag_atp']} kr. om måneden er statsbidrag og ATP, som {html.escape(a['kort'])} opkræver på statens vegne og sender videre. Den del er politisk fastsat og præcis ens hos alle {len(AKASSER)} a-kasser.</p>
+    <p>De resterende <strong>{a['pris'] - S['statsbidrag_atp']} kr.</strong> er {html.escape(a['kort'])}s eget administrationsbidrag til sagsbehandling, rådgivning, kurser og it. Det er den eneste del, der reelt konkurreres på — og målt der ser billedet anderledes ud: {html.escape(BILLIGST_ALLE['kort'])} klarer sig for {BILLIGST_ALLE['pris'] - S['statsbidrag_atp']} kr., mens {html.escape(a['kort'])} bruger {a['pris'] - S['statsbidrag_atp']} kr., altså {'samme beløb' if a['pris'] == BILLIGST_ALLE['pris'] else f"{abs(a['pris'] - BILLIGST_ALLE['pris'])} kr. {'mindre' if a['pris'] < BILLIGST_ALLE['pris'] else 'mere'}"}.</p>
+    <p>{variant(a, [
+      "Hele beløbet er fradragsberettiget og indberettes automatisk til Skattestyrelsen.",
+      "Kontingentet trækkes fuldt fra i skat, og indberetningen sker automatisk.",
+      "Du får fradrag for hele kontingentet, og a-kassen sørger selv for indberetningen.",
+    ])} <a href="/a-kasse-priser/">Se hvordan priserne er sammensat på tværs af markedet</a>.</p>
 
     <h2>Hvilke dagpenge får du som medlem af {html.escape(a['kort'])}?</h2>
-    <p>Præcis de samme som i alle andre a-kasser. Dagpengesatserne er fastsat ved lov, og de reguleres hvert år pr. 1. januar. Det betyder, at {html.escape(a['kort'])} hverken kan give dig mere eller mindre end en a-kasse til {BILLIGST['pris']} eller {DYREST['pris']} kr. om måneden.</p>
-    {satstabel()}
-    <p>Det, {html.escape(a['kort'])} kan påvirke, er noget andet: hvor hurtigt din sag bliver behandlet, om din sats bliver beregnet rigtigt første gang, og hvilken rådgivning du får undervejs. En dagpengesats, der er sat 1.000 kr. for lavt om måneden, koster dig cirka 24.000 kr. over en toårig dagpengeperiode — mange gange mere end forskellen på kontingenterne.</p>
+    <p>Præcis de samme som i alle andre a-kasser. Dagpengesatserne er fastsat ved lov, og de reguleres hvert år pr. 1. januar. Det betyder, at {html.escape(a['kort'])} hverken kan give dig mere eller mindre end en a-kasse til {BILLIGST['pris']} eller {DYREST['pris']} kr. om måneden. Højeste sats i {AAR} er {kr(S['maks_fuldtid'])} kr. om måneden før skat — se <a href="/dagpengesatser/">alle {AAR}-satser og hvordan din personlige sats beregnes</a>.</p>
+    <p>Det, {html.escape(a['kort'])} kan påvirke, er noget andet: hvor hurtigt din sag bliver behandlet, om din sats bliver beregnet rigtigt første gang, og hvilken rådgivning du får undervejs. En dagpengesats, der er sat 1.000 kr. for lavt om måneden, koster dig cirka 24.000 kr. over en toårig dagpengeperiode — mange gange mere end forskellen mellem {html.escape(a['kort'])}s kontingent på {a['pris']} kr. og landets billigste på {BILLIGST['pris']} kr.</p>
 
     <h2>{html.escape(a['kort'])} sammenlignet med lignende a-kasser</h2>
     <p>Nedenfor ser du, hvordan prisen står i forhold til de nærmeste alternativer. Husk, at dagpengene er identiske — så en merpris skal modsvares af ydelser, du reelt bruger.</p>
@@ -1084,11 +1151,9 @@ def byg_akasse(a):
 
     <h2>Sådan melder du dig ind i {html.escape(a['kort'])}</h2>
     <ol class="trin">
-      <li><strong>Tjek at du opfylder betingelserne.</strong> {'A-kassen er åben for alle, så du behøver hverken en bestemt uddannelse eller branche.' if a['type'] == 'tvaerfaglig' else 'A-kassen er fagspecifik, så du skal have en relevant uddannelse eller være beskæftiget inden for området.'}</li>
-      <li><strong>Meld dig ind online.</strong> Det tager typisk under fem minutter med MitID. Du skal bruge dit CPR-nummer og oplysninger om din nuværende a-kasse, hvis du skifter.</li>
-      <li><strong>Lad {html.escape(a['kort'])} klare overflytningen.</strong> Du skal ikke selv melde dig ud af din gamle a-kasse. Den nye sørger for overflytningen, så du undgår et hul i dækningen.</li>
-      <li><strong>Kontrollér din anciennitet.</strong> Når overflytningen er gennemført, kan du se din samlede medlemsanciennitet i selvbetjeningen. Den afgør blandt andet retten til beskæftigelsestillæg og efterløn.</li>
-      <li><strong>Tag stilling til efterløn og lønsikring.</strong> Efterlønsbidraget koster {S['efterloensbidrag']} kr. om måneden oveni og er et selvstændigt valg — det er ikke en del af a-kassekontingentet.</li>
+      <li><strong>Tjek adgangskravet.</strong> {'A-kassen er tværfaglig, så du kan blive medlem uanset uddannelse og branche.' if a['type'] == 'tvaerfaglig' else f"A-kassen er fagspecifik: du skal have en relevant uddannelse eller være beskæftiget inden for {html.escape(a['maalgruppe'].lower())}."}</li>
+      <li><strong>Meld dig ind online med MitID.</strong> Det tager under fem minutter på {a['hjemmeside'].split('/')[2]}. Skifter du fra en anden a-kasse, sørger {html.escape(a['kort'])} selv for overflytningen — du skal aldrig melde dig ud af den gamle først. <a href="/skift-a-kasse/">Se hele fremgangsmåden ved skift</a>.</li>
+      <li><strong>Tag stilling til efterløn.</strong> Efterlønsbidraget koster {S['efterloensbidrag']} kr. om måneden oveni de {a['pris']} kr. og er et selvstændigt valg.</li>
     </ol>
 
     {cta_box(f"Vil du videre med {a['kort']}?", f"{html.escape(a['kort'])} koster {a['pris']} kr. om måneden. Du kan melde dig ind online med MitID, og a-kassen sørger selv for at flytte dig fra din nuværende a-kasse.")}
@@ -1097,8 +1162,9 @@ def byg_akasse(a):
 
     <h2>Vores vurdering</h2>
     <p>{html.escape(a['kort'])} er {'et af landets billigste valg' if plads <= 5 else ('et mellemdyrt valg' if plads <= 15 else 'et af de dyrere valg')} med {a['pris']} kr. om måneden. {html.escape(a['hvem'])} Er du i tvivl, så husk hovedreglen: dagpengene er ens overalt, så du skal vælge ud fra pris plus de ydelser, du realistisk kommer til at bruge.</p>
-    <p>Overvejer du alternativer, kan du <a href="/sammenlign/">sammenligne alle {len(AKASSER)} a-kasser side om side</a> eller læse vores gennemgang af <a href="/billigste-a-kasse/">den billigste a-kasse i {AAR}</a>.</p>
+    <p>Overvejer du alternativer, kan du <a href="/billigste-a-kasse/">sammenligne alle {len(AKASSER)} a-kasser side om side</a> eller læse vores gennemgang af <a href="/billigste-a-kasse/">den billigste a-kasse i {AAR}</a>.</p>
   </article>
+  {kilder(SITE['opdateret'])}
   {forfatterboks()}
   {relaterede(url)}
 </div>"""
@@ -1110,7 +1176,12 @@ def byg_akasse(a):
     {nav_krumme}
     <p class="artikel-kicker">A-kasse anmeldelse · {AAR}</p>
     <h1>{html.escape(a['navn'])}: pris, fordele og anmeldelse {AAR}</h1>
-    <p class="artikel-manchet">{html.escape(a['kort'])} koster {a['pris']} kr. om måneden i {AAR} og henvender sig til {html.escape(a['maalgruppe'].lower())}. Her er nøgletallene, fordelene, ulemperne og hvordan prisen står i forhold til de {len(AKASSER)} andre a-kasser.</p>
+    <p class="artikel-manchet">{variant(a, [
+      f"{html.escape(a['kort'])} koster {a['pris']} kr. om måneden i {AAR} og henvender sig til {html.escape(a['maalgruppe'].lower())}. Vi har regnet på, hvad du reelt betaler, og hvor a-kassen ligger blandt de {len(AKASSER)} danske a-kasser.",
+      f"Med {a['pris']} kr. om måneden ligger {html.escape(a['kort'])} som nr. {plads} af {len(AKASSER)} på pris. Her er målgruppen, ydelserne, ulemperne og de nærmeste alternativer.",
+      f"Er {html.escape(a['kort'])} pengene værd? A-kassen koster {a['pris']} kr. om måneden og er målrettet {html.escape(a['maalgruppe'].lower())}. Vi gennemgår pris, fordele, ulemper og hvem den passer til.",
+      f"{html.escape(a['kort'])} henvender sig til {html.escape(a['maalgruppe'].lower())} og koster {a['pris']} kr. om måneden i {AAR} — {kr(net)} kr. efter skattefradrag. Se nøgletal, fordele og ulemper.",
+    ])}</p>
     <p class="artikel-meta">
       <img class="meta-foto" src="/assets/img/emil-rostgaard.webp" alt="" width="28" height="28" loading="lazy" decoding="async">
       Af <a href="/om/emil-rostgaard/">Emil Rostgaard</a>
@@ -1193,16 +1264,6 @@ def byg_forside():
   </div>
 </section>
 
-<section class="sektion">
-  <div class="ramme">
-    <header class="sektion-hoved">
-      <h2>Hvad koster a-kasse og fagforening samlet?</h2>
-      <p>Fagforening er et selvstændigt valg. Forskellen mellem de billige tillæg og de klassiske forbund er langt større end forskellen på a-kassekontingenterne.</p>
-    </header>
-    {fagforeningstabel()}
-  </div>
-</section>
-
 <section class="sektion sektion--lys">
   <div class="ramme ramme--artikel">
     <article class="prose">
@@ -1264,7 +1325,7 @@ def byg_forside():
       <a class="guide-kort" href="/a-kasse-priser/"><span class="guide-nr">02</span><h3>A-kasse priser {AAR}</h3><p>Hvad kontingentet består af, hvorfor priserne steg i {AAR}, og hvad du får for pengene.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/skift-a-kasse/"><span class="guide-nr">03</span><h3>Skift a-kasse</h3><p>Trin for trin, hvad der sker med anciennitet, efterløn og forudbetalt kontingent.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/dagpengesatser/"><span class="guide-nr">04</span><h3>Dagpengesatser {AAR}</h3><p>Alle satser, beskæftigelsestillæg og hvordan din personlige sats bliver beregnet.</p><span class="guide-mere">Læs guiden →</span></a>
-      <a class="guide-kort" href="/dimittend-dagpenge/"><span class="guide-nr">05</span><h3>Dagpenge som nyuddannet</h3><p>Dimittendsatser, 14-dages fristen og den karensmåned, der overrasker de fleste.</p><span class="guide-mere">Læs guiden →</span></a>
+      <a class="guide-kort" href="/dagpenge-nyuddannet/"><span class="guide-nr">05</span><h3>Dagpenge som nyuddannet</h3><p>Dimittendsatser, 14-dages fristen og den karensmåned, der overrasker de fleste.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/a-kasse-selvstaendig/"><span class="guide-nr">06</span><h3>A-kasse for selvstændige</h3><p>Hvornår du kan få dagpenge med CVR-nummer, og hvilke a-kasser der reelt kan hjælpe.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/a-kasse-studerende/"><span class="guide-nr">07</span><h3>A-kasse som studerende</h3><p>Gratis studiemedlemskab, hvornår du skal melde dig ind, og hvad det er værd.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/dagpengeberegner/"><span class="guide-nr">08</span><h3>Dagpengeberegner</h3><p>Beregn din sats, din dækningsgrad og hvad a-kassen reelt koster efter fradrag.</p><span class="guide-mere">Åbn beregneren →</span></a>
@@ -1281,6 +1342,7 @@ def byg_forside():
     ld_site = json.dumps({
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": DOMAENE + "/#website",
         "name": SITE["navn"],
         "url": DOMAENE + "/",
         "inLanguage": "da-DK",
@@ -1301,9 +1363,15 @@ def byg_forside():
 
     faq_ld, krop = faq_jsonld(krop)
 
+    preload_hero = (
+        '<link rel="preload" as="image" href="/assets/img/hero.webp" '
+        'media="(min-width: 701px)" fetchpriority="high">\n'
+        '<link rel="preload" as="image" href="/assets/img/hero-lille.webp" '
+        'media="(max-width: 700px)" fetchpriority="high">')
     side("/", f"Sammenlign a-kasser {AAR} — priser på alle {len(AKASSER)} danske a-kasser",
          f"Sammenlign priser på alle {len(AKASSER)} danske a-kasser i {AAR}. Fra {BILLIGST['pris']} kr./md. Se kontingent, målgruppe, fagforeningstillæg og find den billigste a-kasse til dit fag.",
-         krop, jsonld=[ld_site, ld_liste, faq_ld], aktiv="/", hero=hero, klasse="side-forside", prioritet="1.0")
+         krop, jsonld=[ld_site, ld_liste, faq_ld], aktiv="/", hero=hero, klasse="side-forside",
+         prioritet="1.0", preload=preload_hero)
 
 
 # ---------------------------------------------------------------- oversigter
@@ -1346,9 +1414,9 @@ def byg_sammenlign():
     {cta_box()}
   </div>
 </section>"""
-    side("/sammenlign/", f"Sammenlign a-kasser {AAR} — priser, fordele og målgrupper",
+    side("/billigste-a-kasse/", f"Sammenlign a-kasser {AAR} — priser, fordele og målgrupper",
          f"Sammenlign alle {len(AKASSER)} danske a-kasser på pris, målgruppe, fagforeningstillæg og adgang. Filtrér og sortér selv. Priser for {AAR}.",
-         krop, jsonld=[krumme_ld], aktiv="/sammenlign/", hero=hero, prioritet="0.9")
+         krop, jsonld=[krumme_ld], aktiv="/billigste-a-kasse/", hero=hero, prioritet="0.9")
 
 
 def byg_akasse_oversigt():
@@ -1396,7 +1464,7 @@ def byg_guides():
          "Processen trin for trin, hvad der sker med anciennitet og efterløn, og de fire fejl der koster penge."),
         ("/dagpengesatser/", f"Dagpengesatser {AAR}",
          f"Alle satser, beskæftigelsestillæg på op til {kr(S['tillaeg_fuldtid'])} kr. og hvordan din personlige sats beregnes."),
-        ("/dimittend-dagpenge/", "Dagpenge som nyuddannet",
+        ("/dagpenge-nyuddannet/", "Dagpenge som nyuddannet",
          "Dimittendsatser, 14-dages fristen og karensmåneden, der overrasker de fleste."),
         ("/a-kasse-selvstaendig/", "A-kasse for selvstændige",
          "Hvornår du kan få dagpenge med CVR-nummer, reglerne om ophør og bibeskæftigelse, og hvilke a-kasser der reelt kan hjælpe."),
@@ -1506,6 +1574,8 @@ DirectoryIndex index.html
   RewriteEngine On
   # Permanente omdirigeringer af flyttede sider
   RewriteRule ^billig-a-kasse/?$ /billigste-a-kasse/ [R=301,L]
+  RewriteRule ^dimittend-dagpenge/?$ /dagpenge-nyuddannet/ [R=301,L]
+  RewriteRule ^sammenlign/?$ /#pristabel [R=301,L]
   # Tving https
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
@@ -1554,7 +1624,6 @@ def main():
     ryd()
     byg_favicon()
     byg_forside()
-    byg_sammenlign()
     byg_akasse_oversigt()
     byg_guides()
     for a in AKASSER:
@@ -1565,6 +1634,9 @@ def main():
     statiske_sider.byg(globals())
     byg_sitemap()
     byg_htaccess()
+    import minificer
+    for linje in minificer.koer():
+        print('  ' + linje)
     print(f"✔ Byggede {len(SIDER)} sider ({len(AKASSER)} a-kasser).")
 
 

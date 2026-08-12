@@ -81,7 +81,7 @@ def byg(g):
       <li><a href="/a-kasse-priser/">A-kasse priser {AAR}</a></li>
       <li><a href="/skift-a-kasse/">Sådan skifter du a-kasse</a></li>
       <li><a href="/dagpengesatser/">Dagpengesatser {AAR}</a></li>
-      <li><a href="/dimittend-dagpenge/">Dagpenge som nyuddannet</a></li>
+      <li><a href="/dagpenge-nyuddannet/">Dagpenge som nyuddannet</a></li>
       <li><a href="/a-kasse-selvstaendig/">A-kasse for selvstændige</a></li>
       <li><a href="/a-kasse-studerende/">A-kasse som studerende</a></li>
     </ul>
@@ -372,7 +372,7 @@ def byg(g):
     <h1>Siden findes ikke</h1>
     <p class="ingress">Linket er enten forkert, eller også er siden flyttet. Her er de steder, folk oftest skal hen:</p>
     <ul class="link-liste">
-      <li><a href="/sammenlign/">Sammenlign alle {len(AKASSER)} a-kasser</a></li>
+      <li><a href="/billigste-a-kasse/">Sammenlign alle {len(AKASSER)} a-kasser</a></li>
       <li><a href="/billigste-a-kasse/">Billigste a-kasse i {AAR}</a></li>
       <li><a href="/a-kasser/">Oversigt over alle a-kasser</a></li>
       <li><a href="/dagpengeberegner/">Beregn dine dagpenge</a></li>
