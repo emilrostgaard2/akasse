@@ -43,7 +43,15 @@
       <span class="menu-tekst">Menu</span>
     </button>
     <nav class="hoved-nav" id="hovedmenu" aria-label="Hovedmenu">
-      <ul><li><a href="/sammenlign/">Sammenlign priser</a></li><li><a href="/a-kasser/" aria-current="page">A-kasser</a></li><li><a href="/dagpengeberegner/">Dagpengeberegner</a></li><li><a href="/guides/">Guides</a></li></ul>
+      <ul><li><a href="/sammenlign/">Sammenlign priser</a></li><li><a href="/billig-a-kasse/">Billigste a-kasse</a></li><li class="har-drop" data-drop>
+        <button type="button" class="nav-knap er-aktiv" aria-expanded="false" aria-controls="drop-2">
+          Guides<span class="drop-pil" aria-hidden="true">▾</span>
+        </button>
+        <div class="drop" id="drop-2">
+          <ul><li><a href="/a-kasse-priser/"><span class="drop-titel">A-kasse priser 2026</span><span class="drop-tekst">Hvad kontingentet består af</span></a></li><li><a href="/skift-a-kasse/"><span class="drop-titel">Skift a-kasse</span><span class="drop-tekst">Gratis og på fem minutter</span></a></li><li><a href="/dagpengesatser/"><span class="drop-titel">Dagpengesatser 2026</span><span class="drop-tekst">Alle satser og beregning</span></a></li><li><a href="/dimittend-dagpenge/"><span class="drop-titel">Dagpenge som nyuddannet</span><span class="drop-tekst">Dimittendsats og frister</span></a></li><li><a href="/a-kasse-selvstaendig/"><span class="drop-titel">A-kasse for selvstændige</span><span class="drop-tekst">Regler ved eget CVR</span></a></li><li><a href="/a-kasse-studerende/"><span class="drop-titel">A-kasse som studerende</span><span class="drop-tekst">Gratis medlemskab</span></a></li><li><a href="/a-kasser/"><span class="drop-titel">Alle a-kasser A-Å</span><span class="drop-tekst">Oversigt over alle 24</span></a></li></ul>
+          <a class="drop-alle" href="/guides/">Se alle guides →</a>
+        </div>
+      </li><li><a href="/dagpengeberegner/">Dagpengeberegner</a></li></ul>
     </nav>
     <a class="hoved-cta" href="/sammenlign/">Find din a-kasse</a>
   </div>
@@ -68,11 +76,16 @@
 <div class="ramme ramme--artikel">
   <article class="prose">
     <div class="ak-top">
-      <div class="ak-top-logo"><span class="logo logo--stor logo--tekst" aria-hidden="true">DE</span></div>
+      <div class="ak-top-logo"><img class="logo logo--stor" src="/assets/img/logoer/dansk-el-forbund.webp" alt="Dansk El-Forbunds A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></div>
       <div class="ak-top-tal">
         <p class="ak-pris"><span class="tal">568</span> <small>kr./md.</small></p>
         <p class="ak-pris-net">392 kr. efter skattefradrag · 6.816 kr. om året</p>
         <p class="ak-plads">Nr. 24 af 24 på pris</p>
+      </div>
+      <div class="ak-top-score">
+        <span class="stjerner" role="img" aria-label="3,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:60%">★★★★★</span></span><span class="stjerne-tal">3,0</span>
+        <span class="ak-score-label">AkasseMatch-score</span>
+        <a class="ak-score-link" href="/redaktionelle-principper/#saadan-beregner-vi-scoren">Sådan beregnes den</a>
       </div>
       <div class="ak-top-cta">
         <a class="knap knap--gaa" href="https://def.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dansk-el-forbund">Gå til Dansk El-Forbund<span class="knap__pil" aria-hidden="true">→</span></a>
@@ -212,6 +225,11 @@
     <p class="forfatter-bio">Har arbejdet med sammenligning af danske forsikrings- og medlemsprodukter siden 2018 og gennemgår kontingenter og satser fra a-kassernes egne prislister og Beskæftigelsesministeriets satsvejledning.</p>
     <p class="forfatter-links"><a href="https://www.linkedin.com/in/emil-rostgaard-702809195/" rel="me noopener" target="_blank" itemprop="sameAs">LinkedIn</a> · <a href="/om/emil-rostgaard/">Profil</a> · <a href="mailto:kontakt@akassematch.dk">kontakt@akassematch.dk</a></p>
   </div>
+</aside>
+  
+<aside class="relaterede">
+  <h2 class="rel-overskrift">Læs også</h2>
+  <div class="rel-grid"><a class="rel-kort" href="/billig-a-kasse/"><span class="rel-titel">Billigste a-kasse 2026</span><span class="rel-tekst">Hele prisoversigten og hvornår billigst faktisk er bedst</span></a><a class="rel-kort" href="/a-kasse-priser/"><span class="rel-titel">A-kasse priser 2026</span><span class="rel-tekst">Hvad kontingentet består af, og hvorfor priserne steg</span></a><a class="rel-kort" href="/skift-a-kasse/"><span class="rel-titel">Skift a-kasse</span><span class="rel-tekst">Gratis, tager fem minutter, anciennitet følger med</span></a><a class="rel-kort" href="/dagpengesatser/"><span class="rel-titel">Dagpengesatser 2026</span><span class="rel-tekst">Højeste sats er 22.041 kr./md.</span></a></div>
 </aside>
 </div>
 </main>

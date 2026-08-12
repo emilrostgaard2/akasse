@@ -35,16 +35,53 @@
       "url": "/sammenlign/"
     },
     {
-      "titel": "A-kasser",
-      "url": "/a-kasser/"
+      "titel": "Billigste a-kasse",
+      "url": "/billig-a-kasse/"
+    },
+    {
+      "titel": "Guides",
+      "url": "/guides/",
+      "boern": [
+        {
+          "titel": "A-kasse priser 2026",
+          "url": "/a-kasse-priser/",
+          "tekst": "Hvad kontingentet består af"
+        },
+        {
+          "titel": "Skift a-kasse",
+          "url": "/skift-a-kasse/",
+          "tekst": "Gratis og på fem minutter"
+        },
+        {
+          "titel": "Dagpengesatser 2026",
+          "url": "/dagpengesatser/",
+          "tekst": "Alle satser og beregning"
+        },
+        {
+          "titel": "Dagpenge som nyuddannet",
+          "url": "/dimittend-dagpenge/",
+          "tekst": "Dimittendsats og frister"
+        },
+        {
+          "titel": "A-kasse for selvstændige",
+          "url": "/a-kasse-selvstaendig/",
+          "tekst": "Regler ved eget CVR"
+        },
+        {
+          "titel": "A-kasse som studerende",
+          "url": "/a-kasse-studerende/",
+          "tekst": "Gratis medlemskab"
+        },
+        {
+          "titel": "Alle a-kasser A-Å",
+          "url": "/a-kasser/",
+          "tekst": "Oversigt over alle 24"
+        }
+      ]
     },
     {
       "titel": "Dagpengeberegner",
       "url": "/dagpengeberegner/"
-    },
-    {
-      "titel": "Guides",
-      "url": "/guides/"
     }
   ],
   "footer_links": [

@@ -7,6 +7,61 @@
 
   var reducer = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------------------------------------------- dropdown i menuen */
+  var drops = document.querySelectorAll('[data-drop]');
+  var erMobil = function () { return window.matchMedia('(max-width: 860px)').matches; };
+
+  function lukAlle(undtagen) {
+    Array.prototype.forEach.call(drops, function (d) {
+      if (d === undtagen) return;
+      d.classList.remove('er-aaben');
+      var k = d.querySelector('.nav-knap');
+      if (k) k.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  Array.prototype.forEach.call(drops, function (d) {
+    var knap = d.querySelector('.nav-knap');
+    if (!knap) return;
+
+    knap.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var aaben = d.classList.contains('er-aaben');
+      lukAlle(d);
+      d.classList.toggle('er-aaben', !aaben);
+      knap.setAttribute('aria-expanded', String(!aaben));
+    });
+
+    // hover på desktop
+    d.addEventListener('mouseenter', function () {
+      if (erMobil()) return;
+      lukAlle(d);
+      d.classList.add('er-aaben');
+      knap.setAttribute('aria-expanded', 'true');
+    });
+    d.addEventListener('mouseleave', function () {
+      if (erMobil()) return;
+      d.classList.remove('er-aaben');
+      knap.setAttribute('aria-expanded', 'false');
+    });
+
+    // luk ved tab ud af gruppen
+    d.addEventListener('focusout', function (e) {
+      if (erMobil()) return;
+      if (!d.contains(e.relatedTarget)) {
+        d.classList.remove('er-aaben');
+        knap.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  if (drops.length) {
+    document.addEventListener('click', function () { lukAlle(null); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') lukAlle(null);
+    });
+  }
+
   /* ---------------------------------------------- mobilmenu */
   var menuKnap = document.querySelector('[data-menu]');
   var nav = document.getElementById('hovedmenu');
@@ -160,21 +215,25 @@
       });
     }
 
-    /* sortering på pris */
-    var prisTh = tabel.querySelector('th[data-sort="pris"]');
-    if (prisTh) {
-      var stigende = true;
-      prisTh.querySelector('button').addEventListener('click', function () {
+    /* sortering på pris og score */
+    Array.prototype.forEach.call(tabel.querySelectorAll('button[data-sort]'), function (knap) {
+      var felt = knap.getAttribute('data-sort');
+      var th = knap.closest('th');
+      var stigende = felt === 'pris';
+      knap.addEventListener('click', function () {
         stigende = !stigende;
-        prisTh.setAttribute('aria-sort', stigende ? 'ascending' : 'descending');
+        Array.prototype.forEach.call(tabel.querySelectorAll('th'), function (h) {
+          h.removeAttribute('aria-sort');
+        });
+        th.setAttribute('aria-sort', stigende ? 'ascending' : 'descending');
         raekker.sort(function (a, b) {
-          var d = (+a.dataset.pris) - (+b.dataset.pris);
+          var d = parseFloat(a.dataset[felt]) - parseFloat(b.dataset[felt]);
           return stigende ? d : -d;
         });
         raekker.forEach(function (r) { tbody.appendChild(r); });
         opdater();
       });
-    }
+    });
   });
 
   /* ---------------------------------------------- dagpengeberegner */

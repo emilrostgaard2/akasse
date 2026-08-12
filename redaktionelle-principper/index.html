@@ -43,7 +43,15 @@
       <span class="menu-tekst">Menu</span>
     </button>
     <nav class="hoved-nav" id="hovedmenu" aria-label="Hovedmenu">
-      <ul><li><a href="/sammenlign/">Sammenlign priser</a></li><li><a href="/a-kasser/">A-kasser</a></li><li><a href="/dagpengeberegner/">Dagpengeberegner</a></li><li><a href="/guides/">Guides</a></li></ul>
+      <ul><li><a href="/sammenlign/">Sammenlign priser</a></li><li><a href="/billig-a-kasse/">Billigste a-kasse</a></li><li class="har-drop" data-drop>
+        <button type="button" class="nav-knap" aria-expanded="false" aria-controls="drop-2">
+          Guides<span class="drop-pil" aria-hidden="true">▾</span>
+        </button>
+        <div class="drop" id="drop-2">
+          <ul><li><a href="/a-kasse-priser/"><span class="drop-titel">A-kasse priser 2026</span><span class="drop-tekst">Hvad kontingentet består af</span></a></li><li><a href="/skift-a-kasse/"><span class="drop-titel">Skift a-kasse</span><span class="drop-tekst">Gratis og på fem minutter</span></a></li><li><a href="/dagpengesatser/"><span class="drop-titel">Dagpengesatser 2026</span><span class="drop-tekst">Alle satser og beregning</span></a></li><li><a href="/dimittend-dagpenge/"><span class="drop-titel">Dagpenge som nyuddannet</span><span class="drop-tekst">Dimittendsats og frister</span></a></li><li><a href="/a-kasse-selvstaendig/"><span class="drop-titel">A-kasse for selvstændige</span><span class="drop-tekst">Regler ved eget CVR</span></a></li><li><a href="/a-kasse-studerende/"><span class="drop-titel">A-kasse som studerende</span><span class="drop-tekst">Gratis medlemskab</span></a></li><li><a href="/a-kasser/"><span class="drop-titel">Alle a-kasser A-Å</span><span class="drop-tekst">Oversigt over alle 24</span></a></li></ul>
+          <a class="drop-alle" href="/guides/">Se alle guides →</a>
+        </div>
+      </li><li><a href="/dagpengeberegner/">Dagpengeberegner</a></li></ul>
     </nav>
     <a class="hoved-cta" href="/sammenlign/">Find din a-kasse</a>
   </div>
@@ -71,6 +79,28 @@
 
 <h2 id="3-raekkefoelgen-er-ikke-til-salg">3. Rækkefølgen er ikke til salg</h2>
 <p>Vores tabeller sorteres som udgangspunkt efter pris, fra billigst til dyrest. Ingen a-kasse kan betale for en bedre placering, en fremhævning eller en pænere formulering. Hvor vi fremhæver et valg som anbefaling, står begrundelsen altid i teksten ved siden af.</p>
+<p>På forsiden fremhæver vi tre a-kasser med hver sin begrundelse: billigst med adgang for alle, bedst uden fagforening og bedst til selvstændige. Vi har kommercielle samarbejder med alle tre, og det skriver vi ved siden af kortene. Begrundelserne er efterprøvelige — Det Faglige Hus <em>er</em> den billigste, alle kan blive medlem af, og Ase <em>har</em> den mest specialiserede rådgivning til selvstændige. Er du uenig i vurderingen, kan du se hele markedet sorteret efter pris i tabellen lige nedenfor.</p>
+
+<h2 id="saadan-beregner-vi-scoren">Sådan beregner vi scoren</h2>
+<p>Hver a-kasse får en AkasseMatch-score. <strong>Scoren er ikke en brugeranmeldelse.</strong> Vi indsamler ikke kundetilfredshed, og vi viser aldrig stjerner, der giver indtryk af, at medlemmer har bedømt a-kassen. Scoren er beregnet ud fra data, som du selv kan kontrollere:</p>
+<div class="tabel-wrap" role="region" tabindex="0" aria-label="Scoremodel">
+<table class="data data--enkel">
+  <caption>Sådan fordeler de 5 point sig</caption>
+  <thead><tr><th scope="col">Parameter</th><th scope="col">Maks. point</th><th scope="col">Sådan tildeles de</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Pris</th><td class="tal-celle">3,0</td><td>Lineært fra dyreste a-kasse (0 point) til billigste (3 point)</td></tr>
+    <tr><th scope="row">Åben for alle</th><td class="tal-celle">0,5</td><td>Gives hvis du kan blive medlem uanset uddannelse og branche</td></tr>
+    <tr><th scope="row">Fagforeningstillæg</th><td class="tal-celle">0,5</td><td>0,5 hvis tillægget er under 200 kr./md., 0,3 hvis fagforening er inkluderet</td></tr>
+    <tr><th scope="row">Optager selvstændige</th><td class="tal-celle">0,4</td><td>Gives hvis a-kassen tager selvstændige og freelancere</td></tr>
+    <tr><th scope="row">Lønsikring kan tilkøbes</th><td class="tal-celle">0,2</td><td>Gives hvis a-kassen tilbyder lønsikring</td></tr>
+    <tr><th scope="row">Gratis for studerende</th><td class="tal-celle">0,2</td><td>Gives ved gratis studiemedlemskab</td></tr>
+    <tr><th scope="row">Efterlønsordning</th><td class="tal-celle">0,2</td><td>Gives hvis a-kassen administrerer efterløn</td></tr>
+  </tbody>
+</table>
+</div>
+<p>De syv parametre giver tilsammen et råtal. Råtallet omregnes derefter til en <strong>relativ skala fra 3,0 til 4,9</strong>, hvor markedets stærkeste a-kasse sætter toppen og den svageste bunden. Det betyder to ting, du bør kende: scoren siger noget om, hvordan a-kasserne ligger <em>i forhold til hinanden</em> — ikke om de er gode eller dårlige i absolut forstand. Og scoren kan ikke sammenlignes på tværs af år, fordi skalaen justeres, når priserne ændrer sig.</p>
+<p>Modellen vægter pris tungest, fordi dagpengene er ens i alle a-kasser — prisen er reelt den største objektive forskel. Det betyder også, at scoren har en indbygget begrænsning: den kan ikke måle kvaliteten af rådgivningen eller sagsbehandlingstiden, og en fagspecifik a-kasse med stærk brancheviden bliver ikke belønnet for det. Derfor står der en skriftlig vurdering på hver a-kasses side, og derfor skriver vi konsekvent, at scoren ikke skal stå alene.</p>
+<p>Scoren er den samme, uanset om vi har et kommercielt samarbejde med a-kassen. Formlen ligger åbent i sitets kildekode.</p>
 
 <h2 id="4-vi-skriver-ulemper-for-alle">4. Vi skriver ulemper for alle</h2>
 <p>Hver a-kasse har både fordele og ulemper på sin side — også dem, vi har et kommercielt samarbejde med. En anmeldelse uden ulemper er ikke en anmeldelse, det er en annonce.</p>

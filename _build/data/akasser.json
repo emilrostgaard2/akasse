@@ -8,7 +8,7 @@
     "medlemmer": 242000,
     "type": "tvaerfaglig",
     "badge": "Billigst for alle",
-    "logo": "det-faglige-hus.png",
+    "logo": "det-faglige-hus.webp",
     "stiftet": 1993,
     "maalgruppe": "Alle brancher og uddannelsesniveauer",
     "hvem": "Dig der vil have den laveste faste udgift, og som ikke har brug for en overenskomstbærende fagforening.",
@@ -36,7 +36,8 @@
       "aaben_for_alle": true
     },
     "hjemmeside": "https://www.detfagligehus.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": true
   },
   {
     "slug": "ase",
@@ -47,7 +48,7 @@
     "medlemmer": 130000,
     "type": "tvaerfaglig",
     "badge": "Bedst til selvstændige",
-    "logo": "ase.png",
+    "logo": "ase.webp",
     "stiftet": 1975,
     "maalgruppe": "Selvstændige, freelancere og lønmodtagere i alle brancher",
     "hvem": "Dig der driver virksomhed, arbejder som freelancer eller overvejer at starte for dig selv.",
@@ -75,7 +76,8 @@
       "aaben_for_alle": true
     },
     "hjemmeside": "https://www.ase.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": true
   },
   {
     "slug": "krifa",
@@ -86,7 +88,7 @@
     "medlemmer": 147091,
     "type": "tvaerfaglig",
     "badge": null,
-    "logo": "krifa.png",
+    "logo": "krifa.webp",
     "stiftet": 1899,
     "maalgruppe": "Alle brancher, også selvstændige",
     "hvem": "Dig der lægger vægt på jobsøgningshjælp, trivsel og personlig sparring frem for klassisk fagforeningskamp.",
@@ -114,7 +116,8 @@
       "aaben_for_alle": true
     },
     "hjemmeside": "https://www.krifa.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": true
   },
   {
     "slug": "frie",
@@ -125,7 +128,7 @@
     "medlemmer": 44614,
     "type": "tvaerfaglig",
     "badge": null,
-    "logo": null,
+    "logo": "frie.webp",
     "stiftet": 1959,
     "maalgruppe": "Funktionærer, lønmodtagere og selvstændige på tværs af brancher",
     "hvem": "Dig der vil have én fast sagsbehandler frem for at tale med en ny medarbejder hver gang.",
@@ -153,7 +156,8 @@
       "aaben_for_alle": true
     },
     "hjemmeside": "https://www.frie.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "min-akasse",
@@ -164,7 +168,7 @@
     "medlemmer": 50000,
     "type": "tvaerfaglig",
     "badge": null,
-    "logo": "min-akasse.png",
+    "logo": "min-akasse.webp",
     "stiftet": 2011,
     "maalgruppe": "Lønmodtagere og selvstændige på tværs af fag",
     "hvem": "Dig der vil have en ren a-kasse uden fagforening, men stadig åben for alle brancher.",
@@ -192,7 +196,8 @@
       "aaben_for_alle": true
     },
     "hjemmeside": "https://minakasse.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": true
   },
   {
     "slug": "din-faglige-akasse",
@@ -203,7 +208,7 @@
     "medlemmer": null,
     "type": "tvaerfaglig",
     "badge": null,
-    "logo": null,
+    "logo": "din-faglige-akasse.webp",
     "stiftet": 2002,
     "maalgruppe": "Alle brancher",
     "hvem": "Dig der leder efter et alternativ til de største tværfaglige a-kasser.",
@@ -231,7 +236,8 @@
       "aaben_for_alle": true
     },
     "hjemmeside": "https://dinfagligeakasse.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "dsa",
@@ -242,7 +248,7 @@
     "medlemmer": 100000,
     "type": "fagspecifik",
     "badge": "Landets laveste pris",
-    "logo": null,
+    "logo": "dsa.webp",
     "stiftet": 1976,
     "maalgruppe": "Sygeplejersker, bioanalytikere, radiografer, jordemødre og andre sundhedsfaglige",
     "hvem": "Dig med en sundhedsfaglig uddannelse — så er valget stort set givet på forhånd.",
@@ -270,7 +276,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.dsa.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "ajks",
@@ -281,7 +288,7 @@
     "medlemmer": 22700,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "ajks.webp",
     "stiftet": 1972,
     "maalgruppe": "Journalister, kommunikationsfolk, tekstforfattere, oversættere og sprogfolk",
     "hvem": "Dig i medie- og kommunikationsbranchen, især hvis du har freelance- eller honorarindkomst.",
@@ -309,7 +316,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://ajks.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "akademikernes",
@@ -320,7 +328,7 @@
     "medlemmer": 275000,
     "type": "fagspecifik",
     "badge": "Størst for akademikere",
-    "logo": null,
+    "logo": "akademikernes.webp",
     "stiftet": 1975,
     "maalgruppe": "Studerende og færdiguddannede med en videregående uddannelse",
     "hvem": "Dig med en videregående uddannelse — bachelor, professionsbachelor, kandidat eller ph.d.",
@@ -348,7 +356,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.aka.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "laerernes",
@@ -359,7 +368,7 @@
     "medlemmer": 76000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "laerernes.webp",
     "stiftet": 1953,
     "maalgruppe": "Lærere og undervisere fra folkeskole til gymnasium, efterskole og friskole",
     "hvem": "Dig der underviser — også som vikar, årsvikar eller på deltid.",
@@ -387,7 +396,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.dlfa.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "socialpaedagogerne",
@@ -398,7 +408,7 @@
     "medlemmer": 40000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "socialpaedagogerne.webp",
     "stiftet": 1981,
     "maalgruppe": "Socialpædagoger og ansatte på bo-, døgn- og specialtilbud",
     "hvem": "Dig der arbejder socialpædagogisk med udsatte børn, unge eller voksne.",
@@ -426,7 +436,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://sl.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "business-danmark",
@@ -437,7 +448,7 @@
     "medlemmer": 25000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "business-danmark.webp",
     "stiftet": 1918,
     "maalgruppe": "Sælgere, key account managere og andre i salg og marketing",
     "hvem": "Dig der har provision, bonus eller firmabil som del af lønnen.",
@@ -465,7 +476,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.businessdanmark.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "hk",
@@ -476,7 +488,7 @@
     "medlemmer": 180000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "hk.webp",
     "stiftet": 1900,
     "maalgruppe": "Kontor, handel, it, laborant og kommunale HK-områder",
     "hvem": "Dig i en administrativ eller merkantil stilling, især på en overenskomstdækket arbejdsplads.",
@@ -504,7 +516,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.hk.dk/akasse",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "foa",
@@ -515,7 +528,7 @@
     "medlemmer": 173000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "foa.webp",
     "stiftet": 1899,
     "maalgruppe": "SOSU, pædagogmedhjælpere, teknisk service, brand og redning",
     "hvem": "Dig der arbejder i offentlig service — pleje, omsorg, teknisk service eller beredskab.",
@@ -543,7 +556,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.foa.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "bupl",
@@ -554,7 +568,7 @@
     "medlemmer": 60000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "bupl.webp",
     "stiftet": 1973,
     "maalgruppe": "Pædagoger og pædagogstuderende",
     "hvem": "Dig der er uddannet pædagog eller er i gang med pædagoguddannelsen.",
@@ -582,7 +596,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://bupl.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "lederne",
@@ -593,7 +608,7 @@
     "medlemmer": 130000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": "lederne.png",
+    "logo": "lederne.webp",
     "stiftet": 1899,
     "maalgruppe": "Ledere, mellemledere og specialister med lederambitioner",
     "hvem": "Dig med personale- eller fagligt ledelsesansvar — eller dig der er på vej dertil.",
@@ -621,7 +636,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.lederne.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": true
   },
   {
     "slug": "ma",
@@ -632,7 +648,7 @@
     "medlemmer": 90000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "ma.webp",
     "stiftet": 1971,
     "maalgruppe": "Kandidater fra universiteterne, især humaniora og naturvidenskab",
     "hvem": "Dig med en universitetsuddannelse, især hvis du er dimittend eller projektansat.",
@@ -660,7 +676,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://ma-kasse.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "3f",
@@ -699,7 +716,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.3f.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "bfa",
@@ -710,7 +728,7 @@
     "medlemmer": 30000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "bfa.webp",
     "stiftet": 1975,
     "maalgruppe": "Tømrere, murere, malere, gulvlæggere og andre byggefag",
     "hvem": "Dig i byggeriet, hvor arbejdet svinger med sæson og projekter.",
@@ -738,7 +756,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://bf-a.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "teknisk-landsforbund",
@@ -749,7 +768,7 @@
     "medlemmer": 25000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "teknisk-landsforbund.webp",
     "stiftet": 1919,
     "maalgruppe": "Tekniske designere, konstruktører, bygningskonstruktører og designere",
     "hvem": "Dig på en tegnestue, hos en rådgiver eller i en teknisk designfunktion.",
@@ -777,7 +796,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.tl.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "dansk-metal",
@@ -788,7 +808,7 @@
     "medlemmer": 95000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "dansk-metal.webp",
     "stiftet": 1888,
     "maalgruppe": "Smede, mekanikere, industriteknikere, elektronikfagteknikere og it-supportere",
     "hvem": "Dig i industrien, på et værksted eller i en teknisk supportfunktion.",
@@ -816,7 +836,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.danskmetal.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "ca",
@@ -827,7 +848,7 @@
     "medlemmer": 65000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": "ca.png",
+    "logo": "ca.webp",
     "stiftet": 1974,
     "maalgruppe": "Erhvervsøkonomer, HD'ere, cand.merc.'er og ledere i det private",
     "hvem": "Dig med en erhvervsøkonomisk profil i det private erhvervsliv.",
@@ -855,7 +876,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.ca.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": true
   },
   {
     "slug": "nnf",
@@ -894,7 +916,8 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://www.nnf.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   },
   {
     "slug": "dansk-el-forbund",
@@ -905,7 +928,7 @@
     "medlemmer": 30000,
     "type": "fagspecifik",
     "badge": null,
-    "logo": null,
+    "logo": "dansk-el-forbund.webp",
     "stiftet": 1904,
     "maalgruppe": "Elektrikere, elektronikfagteknikere og lærlinge i elfaget",
     "hvem": "Dig i elfaget — som montør, servicetekniker eller lærling.",
@@ -933,6 +956,7 @@
       "aaben_for_alle": false
     },
     "hjemmeside": "https://def.dk/",
-    "affiliate_url": null
+    "affiliate_url": null,
+    "partner": false
   }
 ]
