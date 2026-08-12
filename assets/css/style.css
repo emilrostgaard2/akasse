@@ -1300,3 +1300,53 @@ table.data .c-score { width: 98px; }
   .ak-prisboks { flex: 1 1 auto; justify-content: center; }
   .knap--liste { flex: 1 1 100%; }
 }
+
+/* ============================================================
+   RETTELSER
+   ============================================================ */
+
+/* dropdown arvede display:flex fra .hoved-nav ul — det brød layoutet */
+.drop ul { display: block !important; }
+.drop li { display: block; }
+.drop li a { display: block; padding: 10px 12px; }
+.drop-titel { display: block; font-size: .92rem; font-weight: 700; color: var(--ink); line-height: 1.3; }
+.drop-tekst { display: block; font-size: .79rem; color: var(--muted); line-height: 1.35; margin-top: 1px; }
+.drop { width: 300px; padding: 8px; }
+/* usynlig bro så musen kan nå ned i menuen uden at den lukker */
+.har-drop::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 12px;
+  display: none;
+}
+.har-drop:hover::after { display: block; }
+
+/* "Kort fortalt" stod mørk på mørk baggrund */
+.prose .fakta-titel, .fakta .fakta-titel { color: #fff; }
+.prose .fakta a { color: var(--signal); text-decoration-color: rgba(214,242,75,.5); }
+.prose .fakta a:hover { color: #fff; }
+
+/* stemningsbilledet skal kunne ses */
+.hero-foto { opacity: .42; filter: saturate(.85); }
+.hero-slør {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(8,47,43,.42) 0%, rgba(8,47,43,.74) 52%, rgba(8,47,43,.92) 100%),
+    linear-gradient(180deg, rgba(8,47,43,.35) 0%, rgba(8,47,43,.7) 100%);
+}
+
+/* foldbar indholdsfortegnelse */
+.toc { padding: 0; overflow: hidden; }
+.toc > summary {
+  cursor: pointer; list-style: none; padding: 16px 46px 16px 22px; position: relative;
+  font-family: var(--display); font-size: .82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+}
+.toc > summary::-webkit-details-marker { display: none; }
+.toc > summary::after {
+  content: '+'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+  font-size: 1.35rem; font-weight: 400; color: var(--akcent); transition: transform .22s;
+}
+.toc[open] > summary::after { transform: translateY(-50%) rotate(45deg); }
+.toc > summary:hover { color: var(--akcent); }
+.toc-liste { padding: 0 22px 20px; }
+
+/* anbefalingskort uden den lange begrundelse */
+.kort-hvorfor { display: none; }

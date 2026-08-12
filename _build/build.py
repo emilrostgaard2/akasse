@@ -614,10 +614,10 @@ def byg_toc(krop):
         return ""
     punkter = "".join(f'<li><a href="#{i}">{re.sub(r"<[^>]+>", "", t)}</a></li>' for i, t in fund)
     return f"""
-<nav class="toc" aria-labelledby="toc-titel">
-  <h2 class="toc-titel" id="toc-titel">Indhold på siden</h2>
+<details class="toc" open>
+  <summary>Indhold på siden ({len(fund)} afsnit)</summary>
   <ol class="toc-liste">{punkter}</ol>
-</nav>"""
+</details>"""
 
 
 def faq_jsonld(krop):
@@ -867,6 +867,34 @@ def byg_artikel(sti):
     meta = {k: erstat_variabler(v) for k, v in meta.items()}
     url = meta["url"]
     krop = erstat_variabler(krop)
+
+    # sider med "top: ja" får samme opbygning som forsiden:
+    # anbefalinger → liste → indholdsfortegnelse → artikel
+    top_blok = ""
+    if meta.get("top") == "ja":
+        krop = krop.replace("{{tabel:alle}}", "", 1)
+        top_blok = f"""
+<section class="sektion sektion--anbefaling">
+  <div class="ramme">
+    <header class="sektion-hoved sektion-hoved--midt">
+      <h2>{html.escape(meta.get('top_titel', 'Tre a-kasser vi anbefaler'))}</h2>
+      <p>{meta.get('top_tekst', 'Valgt ud fra hver sin situation. Hele markedet ligger i listen nedenfor.')}</p>
+    </header>
+    {kort_top(3)}
+    <p class="anbefaling-note">Vi modtager kommission, hvis du melder dig ind via disse links. Det ændrer ikke din pris og ikke rækkefølgen i listen nedenfor, som altid sorteres efter kontingent. <a href="/saadan-tjener-vi-penge/">Læs hvordan vi tjener penge</a>.</p>
+  </div>
+</section>
+
+<section class="sektion sektion--liste">
+  <div class="ramme">
+    <header class="sektion-hoved">
+      <h2 id="alle-priser">Alle {len(AKASSER)} a-kasser og priser i {AAR}</h2>
+      <p>Sorteret fra billigst til dyrest. Filtrér på adgang og selvstændige, søg efter dit fag, eller sortér efter score.</p>
+    </header>
+    {tabel(AKASSER, "pristabel")}
+  </div>
+</section>"""
+
     krop = erstat_shortcodes(krop)
     krop = auto_link(krop, url)
     krop = tilfoej_overskrift_id(krop)
@@ -893,6 +921,7 @@ def byg_artikel(sti):
 </section>"""
 
     indhold = f"""
+{top_blok}
 <div class="ramme ramme--artikel">
   <article class="prose">
     {toc}
@@ -1136,8 +1165,8 @@ def byg_forside():
 <section class="sektion sektion--anbefaling">
   <div class="ramme">
     <header class="sektion-hoved sektion-hoved--midt">
-      <h2>Vores tre anbefalinger, hvis du kan vælge frit</h2>
-      <p>Tre a-kasser der optager alle uanset uddannelse og branche — valgt ud fra hver sin situation. Vil du hellere se hele markedet, ligger <a href="#pristabel">tabellen med alle {len(AKASSER)} lige nedenfor</a>.</p>
+      <h2>Billigste a-kasse i {AAR} — hvis du kan vælge frit</h2>
+      <p>Fra {BILLIGST_ALLE['pris']} kr./md. Tre a-kasser der optager alle uanset uddannelse og branche, valgt ud fra hver sin situation. Hele markedet med alle {len(AKASSER)} ligger <a href="#pristabel">i listen nedenfor</a>.</p>
     </header>
     {kort_top(3)}
     <p class="anbefaling-note">Vi modtager kommission, hvis du melder dig ind via disse links. Det ændrer ikke din pris, og det ændrer ikke rækkefølgen i prisstabellen nedenfor, som altid sorteres efter kontingent. <a href="/saadan-tjener-vi-penge/">Læs hvordan vi tjener penge</a>.</p>
