@@ -1350,3 +1350,16 @@ table.data .c-score { width: 98px; }
 
 /* anbefalingskort uden den lange begrundelse */
 .kort-hvorfor { display: none; }
+
+/* ---------------------------------------------- indholdsfortegnelse: kompakt og lukket */
+.toc { border-left-width: 2px; margin-bottom: 1.8em; }
+.toc > summary { padding: 13px 44px 13px 18px; font-size: .76rem; letter-spacing: .07em; }
+.toc-antal {
+  margin-left: 8px; padding: 2px 8px; border-radius: 999px;
+  background: var(--papir-2); color: var(--muted);
+  font-size: .68rem; letter-spacing: .02em; text-transform: none; font-weight: 600;
+}
+.toc > summary::after { right: 17px; font-size: 1.2rem; }
+.toc-liste { padding: 0 18px 16px; column-width: 230px; column-gap: 24px; }
+.toc-liste li { margin-bottom: 5px; font-size: .86rem; line-height: 1.4; }
+.toc-liste li::before { font-size: .7rem; margin-right: 7px; }

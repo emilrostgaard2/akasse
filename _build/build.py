@@ -614,8 +614,8 @@ def byg_toc(krop):
         return ""
     punkter = "".join(f'<li><a href="#{i}">{re.sub(r"<[^>]+>", "", t)}</a></li>' for i, t in fund)
     return f"""
-<details class="toc" open>
-  <summary>Indhold på siden ({len(fund)} afsnit)</summary>
+<details class="toc">
+  <summary>Indhold på siden <span class="toc-antal">{len(fund)} afsnit</span></summary>
   <ol class="toc-liste">{punkter}</ol>
 </details>"""
 
@@ -1165,7 +1165,7 @@ def byg_forside():
 <section class="sektion sektion--anbefaling">
   <div class="ramme">
     <header class="sektion-hoved sektion-hoved--midt">
-      <h2>Billigste a-kasse i {AAR} — hvis du kan vælge frit</h2>
+      <h2>Kan du vælge frit? Start her</h2>
       <p>Fra {BILLIGST_ALLE['pris']} kr./md. Tre a-kasser der optager alle uanset uddannelse og branche, valgt ud fra hver sin situation. Hele markedet med alle {len(AKASSER)} ligger <a href="#pristabel">i listen nedenfor</a>.</p>
     </header>
     {kort_top(3)}
