@@ -158,14 +158,14 @@
     }
   });
 
-  /* ---------------------------------------------- tabelfilter, søgning og sortering */
-  Array.prototype.forEach.call(document.querySelectorAll('.tabel-blok'), function (blok) {
-    var tabel = blok.querySelector('table.data');
-    if (!tabel) return;
-    var tbody = tabel.querySelector('tbody');
-    var raekker = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+  /* ---------------------------------------------- filtrering, søgning og sortering */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-liste]'), function (blok) {
+    var beholder = blok.querySelector('.ak-liste');
+    if (!beholder) return;
+    var raekker = Array.prototype.slice.call(beholder.querySelectorAll('[data-raekke]'));
     var chips = blok.querySelectorAll('[data-filter]');
     var soegFelt = blok.querySelector('[data-soeg]');
+    var sorterFelt = blok.querySelector('[data-sorter]');
     var tomt = blok.querySelector('.tomt-resultat');
     var nulstilKnap = blok.querySelector('[data-nulstil]');
     var aktivtFilter = 'alle';
@@ -182,9 +182,24 @@
         var passerSoeg = !q || (r.dataset.navn || '').indexOf(q) !== -1;
         var vis = passerFilter && passerSoeg;
         r.hidden = !vis;
-        if (vis) { synlige++; r.querySelector('.nr').textContent = synlige; }
+        if (vis) {
+          synlige++;
+          var nr = r.querySelector('.ak-nr');
+          if (nr) nr.textContent = synlige;
+        }
       });
       if (tomt) tomt.hidden = synlige !== 0;
+    }
+
+    function sorter() {
+      if (!sorterFelt) return;
+      var felt = sorterFelt.value;
+      raekker.sort(function (a, b) {
+        var va = parseFloat(a.dataset[felt]), vb = parseFloat(b.dataset[felt]);
+        return felt === 'score' ? vb - va : va - vb;
+      });
+      raekker.forEach(function (r) { beholder.appendChild(r); });
+      opdater();
     }
 
     Array.prototype.forEach.call(chips, function (chip) {
@@ -204,6 +219,8 @@
       });
     }
 
+    if (sorterFelt) sorterFelt.addEventListener('change', sorter);
+
     if (nulstilKnap) {
       nulstilKnap.addEventListener('click', function () {
         if (soegFelt) soegFelt.value = '';
@@ -214,26 +231,6 @@
         opdater();
       });
     }
-
-    /* sortering på pris og score */
-    Array.prototype.forEach.call(tabel.querySelectorAll('button[data-sort]'), function (knap) {
-      var felt = knap.getAttribute('data-sort');
-      var th = knap.closest('th');
-      var stigende = felt === 'pris';
-      knap.addEventListener('click', function () {
-        stigende = !stigende;
-        Array.prototype.forEach.call(tabel.querySelectorAll('th'), function (h) {
-          h.removeAttribute('aria-sort');
-        });
-        th.setAttribute('aria-sort', stigende ? 'ascending' : 'descending');
-        raekker.sort(function (a, b) {
-          var d = parseFloat(a.dataset[felt]) - parseFloat(b.dataset[felt]);
-          return stigende ? d : -d;
-        });
-        raekker.forEach(function (r) { tbody.appendChild(r); });
-        opdater();
-      });
-    });
   });
 
   /* ---------------------------------------------- dagpengeberegner */

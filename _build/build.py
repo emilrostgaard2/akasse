@@ -137,85 +137,78 @@ def type_label(a):
 # ---------------------------------------------------------------- komponenter
 
 def tabel(liste, id_="pristabel", vis_filter=True, vis_fagforening=True):
-    """Den store sammenligningstabel."""
+    """Sammenligningsliste — én række pr. a-kasse, bygget som kort frem for bred tabel."""
     filt = ""
     if vis_filter:
         filt = f"""
-<div class="tabel-filtre" data-tabel="{id_}">
+<div class="liste-styring">
   <div class="filter-gruppe" role="group" aria-label="Filtrér a-kasser">
     <button class="chip chip--aktiv" data-filter="alle">Alle ({len(liste)})</button>
     <button class="chip" data-filter="tvaerfaglig">Åben for alle</button>
-    <button class="chip" data-filter="selvstaendig">Til selvstændige</button>
+    <button class="chip" data-filter="selvstaendig">Selvstændige</button>
     <button class="chip" data-filter="fagforening">Med fagforening</button>
   </div>
-  <label class="soeg">
-    <span class="soeg__ikon" aria-hidden="true">⌕</span>
-    <input type="search" placeholder="Søg efter a-kasse eller fag …" data-soeg="{id_}" aria-label="Søg efter a-kasse eller fag">
-  </label>
+  <div class="styring-hoejre">
+    <label class="soeg">
+      <span class="soeg__ikon" aria-hidden="true">⌕</span>
+      <input type="search" placeholder="Søg a-kasse eller fag …" data-soeg="{id_}" aria-label="Søg efter a-kasse eller fag">
+    </label>
+    <label class="sorter">
+      <span class="visuelt-skjult">Sortér efter</span>
+      <select data-sorter>
+        <option value="pris">Laveste pris</option>
+        <option value="score">Højeste score</option>
+      </select>
+    </label>
+  </div>
 </div>"""
 
     raekker = []
     for i, a in enumerate(liste, 1):
-        ff = (f'<strong>+{a["fagforening_tillaeg"]}</strong> kr.' if a.get("fagforening_tillaeg")
-              else ('<span class="ja">Inkluderet</span>' if a["features"]["fagforening"] else "—"))
+        ff = (f'{a["fagforening_tillaeg"]} kr./md.' if a.get("fagforening_tillaeg")
+              else ('Inkluderet' if a["features"]["fagforening"] else 'Tilbydes ikke'))
         badge = f'<span class="badge">{html.escape(a["badge"])}</span>' if a.get("badge") else ""
-        besp = a["pris"] - BILLIGST["pris"]
-        besp_txt = ('<span class="diff diff--bedst">Billigst</span>' if besp == 0
-                    else f'<span class="diff">+{kr(besp * 12)} kr./år</span>')
         s = score(a)
-        knap_tekst = "Meld dig ind" if a.get("partner") else "Se hos udbyder"
+        knap_tekst = "Bliv medlem" if a.get("partner") else "Se hos udbyder"
+        medl = kr(a["medlemmer"]) if a.get("medlemmer") else "—"
         raekker.append(f"""
-  <tr data-type="{a['type']}" data-selvstaendig="{str(a['features']['selvstaendige']).lower()}"
+  <li class="ak-raekke" data-raekke
+      data-type="{a['type']}" data-selvstaendig="{str(a['features']['selvstaendige']).lower()}"
       data-fagforening="{str(a['features']['fagforening']).lower()}"
       data-navn="{html.escape(a['navn'].lower())} {html.escape(a['maalgruppe'].lower())}"
       data-pris="{a['pris']}" data-score="{s}">
-    <td class="c-nr"><span class="nr">{i}</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/{a['slug']}/">
-        <span class="navn-logo">{logo_html(a, 'logo logo--lille')}</span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>{html.escape(a['kort'])}</strong>{badge}</span>
-          <span class="navn-hoej">{html.escape(hoejdepunkt(a))}</span>
-          <span class="navn-maal">{html.escape(a['maalgruppe'])}</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score">{stjerner(s)}</td>
-    <td class="c-pris"><span class="pris">{a['pris']}</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">{kr(efter_fradrag(a['pris']))} kr. efter fradrag</span></td>
-    <td class="c-ff">{ff}</td>
-    <td class="c-aab">{type_label(a)}</td>
-    <td class="c-selv">{ja_nej(a['features']['selvstaendige'])}</td>
-    <td class="c-diff">{besp_txt}</td>
-    <td class="c-cta">{link_ud(a, knap_tekst, "knap knap--lille")}
-        <a class="c-cta-laes" href="/a-kasser/{a['slug']}/">Læs mere</a></td>
-  </tr>""")
+    <span class="ak-nr" aria-hidden="true">{i}</span>
+    <div class="ak-brand">
+      <span class="ak-logo">{logo_html(a, 'logo')}</span>
+      <span class="ak-score">{stjerner(s)}</span>
+      <a class="ak-anmeldelse" href="/a-kasser/{a['slug']}/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn"><a href="/a-kasser/{a['slug']}/">{html.escape(a['kort'])}</a>{badge}</h3>
+      <p class="ak-maal">{html.escape(a['maalgruppe'])}</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>{type_label(a)}</dd></div>
+        <div><dt>Fagforening</dt><dd>{ff}</dd></div>
+        <div><dt>Selvstændige</dt><dd>{'Ja' if a['features']['selvstaendige'] else 'Nej'}</dd></div>
+        <div><dt>Medlemmer</dt><dd>{medl}</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">{a['pris']}<small>kr./md.</small></span>
+        <span class="ak-prisnet">{kr(efter_fradrag(a['pris']))} kr. efter fradrag</span>
+      </div>
+      {link_ud(a, knap_tekst, "knap knap--liste")}
+    </div>
+  </li>""")
 
     return f"""
-<div class="tabel-blok" id="{id_}">
+<div class="liste-blok" id="{id_}" data-liste>
 {filt}
-<div class="tabel-wrap" role="region" aria-label="Sammenligning af a-kasser" tabindex="0">
-<table class="data" data-sortabel>
-  <caption class="visuelt-skjult">Priser på a-kasser i {AAR}, sorteret fra billigst til dyrest</caption>
-  <thead>
-    <tr>
-      <th scope="col" class="c-nr">#</th>
-      <th scope="col" class="c-navn">A-kasse</th>
-      <th scope="col" class="c-score"><button type="button" data-sort="score">Score <span aria-hidden="true">↕</span></button></th>
-      <th scope="col" class="c-pris" aria-sort="ascending"><button type="button" data-sort="pris">Pris/md. <span aria-hidden="true">↕</span></button></th>
-      <th scope="col" class="c-ff">Fagforening</th>
-      <th scope="col" class="c-aab">Adgang</th>
-      <th scope="col" class="c-selv">Selvstændig</th>
-      <th scope="col" class="c-diff">Merpris pr. år</th>
-      <th scope="col" class="c-cta"><span class="visuelt-skjult">Link</span></th>
-    </tr>
-  </thead>
-  <tbody>{''.join(raekker)}
-  </tbody>
-</table>
-</div>
-<p class="tabel-note">Priser er kontingent for a-kassen alene pr. måned i {AAR}. «Efter fradrag» viser den reelle udgift ved en marginalskat på ca. 31 %. Scoren beregnes ud fra pris, adgang og ydelser — <a href="/redaktionelle-principper/#saadan-beregner-vi-scoren">se metoden</a>. Sidst kontrolleret {SITE['opdateret']}. <a href="/saadan-tjener-vi-penge/">Sådan tjener vi penge</a>.</p>
-<p class="tomt-resultat" hidden>Ingen a-kasser matcher din søgning. Prøv et andet ord, eller <button type="button" class="link-knap" data-nulstil>nulstil filtre</button>.</p>
+<ol class="ak-liste">{''.join(raekker)}</ol>
+<p class="tomt-resultat" hidden>Ingen a-kasser matcher din søgning. <button type="button" class="link-knap" data-nulstil>Nulstil filtre</button></p>
+<p class="liste-note">Priser er kontingent for a-kassen alene pr. måned i {AAR}. «Efter fradrag» er den reelle udgift ved en marginalskat på ca. 31 %. Scoren beregnes ud fra pris, adgang og ydelser — <a href="/redaktionelle-principper/#saadan-beregner-vi-scoren">se metoden</a>. Sidst kontrolleret {SITE['opdateret']}. <a href="/saadan-tjener-vi-penge/">Sådan tjener vi penge</a>.</p>
 </div>"""
 
 
@@ -506,8 +499,8 @@ def erstat_variabler(tekst):
 # ---------------------------------------------------------------- layout
 
 INTERNE_LINKS = [
-    ("billigste a-kasse", "/billig-a-kasse/"),
-    ("billigste a-kasser", "/billig-a-kasse/"),
+    ("billigste a-kasse", "/billigste-a-kasse/"),
+    ("billigste a-kasser", "/billigste-a-kasse/"),
     ("skifte a-kasse", "/skift-a-kasse/"),
     ("skifter a-kasse", "/skift-a-kasse/"),
     ("dagpengesatsen", "/dagpengesatser/"),
@@ -577,7 +570,7 @@ def auto_link(krop, egen_url):
 
 def relaterede(egen_url, antal=4):
     alle = [
-        ("/billig-a-kasse/", "Billigste a-kasse " + str(AAR), "Hele prisoversigten og hvornår billigst faktisk er bedst"),
+        ("/billigste-a-kasse/", "Billigste a-kasse " + str(AAR), "Hele prisoversigten og hvornår billigst faktisk er bedst"),
         ("/a-kasse-priser/", f"A-kasse priser {AAR}", "Hvad kontingentet består af, og hvorfor priserne steg"),
         ("/skift-a-kasse/", "Skift a-kasse", "Gratis, tager fem minutter, anciennitet følger med"),
         ("/dagpengesatser/", f"Dagpengesatser {AAR}", f"Højeste sats er {kr(S['maks_fuldtid'])} kr./md."),
@@ -712,7 +705,7 @@ def side(url, titel, beskrivelse, krop, *, jsonld=None, aktiv=None, klasse="",
         <h2 class="fod-titel">Sammenlign</h2>
         <ul>
           <li><a href="/sammenlign/">Alle a-kasser og priser</a></li>
-          <li><a href="/billig-a-kasse/">Billigste a-kasse {AAR}</a></li>
+          <li><a href="/billigste-a-kasse/">Billigste a-kasse {AAR}</a></li>
           <li><a href="/a-kasse-priser/">A-kasse priser {AAR}</a></li>
           <li><a href="/a-kasser/">Oversigt over a-kasser</a></li>
           <li><a href="/dagpengeberegner/">Dagpengeberegner</a></li>
@@ -1075,7 +1068,7 @@ def byg_akasse(a):
 
     <h2>Vores vurdering</h2>
     <p>{html.escape(a['kort'])} er {'et af landets billigste valg' if plads <= 5 else ('et mellemdyrt valg' if plads <= 15 else 'et af de dyrere valg')} med {a['pris']} kr. om måneden. {html.escape(a['hvem'])} Er du i tvivl, så husk hovedreglen: dagpengene er ens overalt, så du skal vælge ud fra pris plus de ydelser, du realistisk kommer til at bruge.</p>
-    <p>Overvejer du alternativer, kan du <a href="/sammenlign/">sammenligne alle {len(AKASSER)} a-kasser side om side</a> eller læse vores gennemgang af <a href="/billig-a-kasse/">den billigste a-kasse i {AAR}</a>.</p>
+    <p>Overvejer du alternativer, kan du <a href="/sammenlign/">sammenligne alle {len(AKASSER)} a-kasser side om side</a> eller læse vores gennemgang af <a href="/billigste-a-kasse/">den billigste a-kasse i {AAR}</a>.</p>
   </article>
   {forfatterboks()}
   {relaterede(url)}
@@ -1155,7 +1148,7 @@ def byg_forside():
   <div class="ramme">
     <header class="sektion-hoved">
       <h2 id="pristabel-titel">Priser på alle a-kasser i {AAR}</h2>
-      <p>Sorteret fra billigst til dyrest. Kolonnen «efter fradrag» viser, hvad kontingentet reelt koster dig, når skattefradraget er trukket fra.</p>
+      <p>Sorteret fra billigst til dyrest. Filtrér på adgang og selvstændige, søg efter dit fag, eller sortér efter score.</p>
     </header>
     {tabel(AKASSER, "pristabel")}
   </div>
@@ -1238,7 +1231,7 @@ def byg_forside():
       <p>Vi har lavet dybdegående guides til de situationer, hvor valget af a-kasse har størst betydning.</p>
     </header>
     <div class="guide-grid">
-      <a class="guide-kort" href="/billig-a-kasse/"><span class="guide-nr">01</span><h3>Billigste a-kasse {AAR}</h3><p>Hele prisoversigten, den reelle udgift efter fradrag og hvornår billigst faktisk er bedst.</p><span class="guide-mere">Læs guiden →</span></a>
+      <a class="guide-kort" href="/billigste-a-kasse/"><span class="guide-nr">01</span><h3>Billigste a-kasse {AAR}</h3><p>Hele prisoversigten, den reelle udgift efter fradrag og hvornår billigst faktisk er bedst.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/a-kasse-priser/"><span class="guide-nr">02</span><h3>A-kasse priser {AAR}</h3><p>Hvad kontingentet består af, hvorfor priserne steg i {AAR}, og hvad du får for pengene.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/skift-a-kasse/"><span class="guide-nr">03</span><h3>Skift a-kasse</h3><p>Trin for trin, hvad der sker med anciennitet, efterløn og forudbetalt kontingent.</p><span class="guide-mere">Læs guiden →</span></a>
       <a class="guide-kort" href="/dagpengesatser/"><span class="guide-nr">04</span><h3>Dagpengesatser {AAR}</h3><p>Alle satser, beskæftigelsestillæg og hvordan din personlige sats bliver beregnet.</p><span class="guide-mere">Læs guiden →</span></a>
@@ -1366,7 +1359,7 @@ def byg_guides():
   </div>
 </section>"""
     poster = [
-        ("/billig-a-kasse/", "Billigste a-kasse " + str(AAR),
+        ("/billigste-a-kasse/", "Billigste a-kasse " + str(AAR),
          f"Hele prisoversigten fra {BILLIGST['pris']} kr./md., den reelle udgift efter skattefradrag og de tre situationer, hvor billigst faktisk ikke er bedst."),
         ("/a-kasse-priser/", f"A-kasse priser {AAR}",
          "Hvad kontingentet består af, hvorfor priserne steg ved årsskiftet, og hvad du reelt betaler efter fradrag."),
@@ -1482,6 +1475,8 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  # Permanente omdirigeringer af flyttede sider
+  RewriteRule ^billig-a-kasse/?$ /billigste-a-kasse/ [R=301,L]
   # Tving https
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]

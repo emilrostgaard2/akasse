@@ -77,7 +77,7 @@ def byg(g):
 
     <h2>Artikler af Emil Rostgaard</h2>
     <ul class="link-liste">
-      <li><a href="/billig-a-kasse/">Billigste a-kasse {AAR}</a></li>
+      <li><a href="/billigste-a-kasse/">Billigste a-kasse {AAR}</a></li>
       <li><a href="/a-kasse-priser/">A-kasse priser {AAR}</a></li>
       <li><a href="/skift-a-kasse/">Sådan skifter du a-kasse</a></li>
       <li><a href="/dagpengesatser/">Dagpengesatser {AAR}</a></li>
@@ -373,7 +373,7 @@ def byg(g):
     <p class="ingress">Linket er enten forkert, eller også er siden flyttet. Her er de steder, folk oftest skal hen:</p>
     <ul class="link-liste">
       <li><a href="/sammenlign/">Sammenlign alle {len(AKASSER)} a-kasser</a></li>
-      <li><a href="/billig-a-kasse/">Billigste a-kasse i {AAR}</a></li>
+      <li><a href="/billigste-a-kasse/">Billigste a-kasse i {AAR}</a></li>
       <li><a href="/a-kasser/">Oversigt over alle a-kasser</a></li>
       <li><a href="/dagpengeberegner/">Beregn dine dagpenge</a></li>
       <li><a href="/">Forsiden</a></li>

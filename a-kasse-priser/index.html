@@ -43,7 +43,7 @@
       <span class="menu-tekst">Menu</span>
     </button>
     <nav class="hoved-nav" id="hovedmenu" aria-label="Hovedmenu">
-      <ul><li><a href="/sammenlign/">Sammenlign priser</a></li><li><a href="/billig-a-kasse/">Billigste a-kasse</a></li><li class="har-drop" data-drop>
+      <ul><li><a href="/sammenlign/">Sammenlign priser</a></li><li><a href="/billigste-a-kasse/">Billigste a-kasse</a></li><li class="har-drop" data-drop>
         <button type="button" class="nav-knap" aria-expanded="false" aria-controls="drop-2">
           Guides<span class="drop-pil" aria-hidden="true">▾</span>
         </button>
@@ -99,645 +99,755 @@
 
 <h2 id="prisoversigt-alle-a-kasser-i-2026">Prisoversigt: alle a-kasser i 2026</h2>
 
-<p>Tabellen viser kontingentet for a-kassen alene. Fagforening er ikke inkluderet, medmindre det fremgår af kolonnen. Priserne er kontrolleret hos a-kassernes egne prislister 2026-08-01.</p>
+<p>Listen viser kontingentet for a-kassen alene. Fagforening er ikke inkluderet, medmindre det står ud for den enkelte a-kasse. Priserne er kontrolleret hos a-kassernes egne prislister 2026-08-01.</p>
 
 
-<div class="tabel-blok" id="pristabel">
+<div class="liste-blok" id="pristabel" data-liste>
 
-<div class="tabel-filtre" data-tabel="pristabel">
+<div class="liste-styring">
   <div class="filter-gruppe" role="group" aria-label="Filtrér a-kasser">
     <button class="chip chip--aktiv" data-filter="alle">Alle (24)</button>
     <button class="chip" data-filter="tvaerfaglig">Åben for alle</button>
-    <button class="chip" data-filter="selvstaendig">Til selvstændige</button>
+    <button class="chip" data-filter="selvstaendig">Selvstændige</button>
     <button class="chip" data-filter="fagforening">Med fagforening</button>
   </div>
-  <label class="soeg">
-    <span class="soeg__ikon" aria-hidden="true">⌕</span>
-    <input type="search" placeholder="Søg efter a-kasse eller fag …" data-soeg="pristabel" aria-label="Søg efter a-kasse eller fag">
-  </label>
+  <div class="styring-hoejre">
+    <label class="soeg">
+      <span class="soeg__ikon" aria-hidden="true">⌕</span>
+      <input type="search" placeholder="Søg a-kasse eller fag …" data-soeg="pristabel" aria-label="Søg efter a-kasse eller fag">
+    </label>
+    <label class="sorter">
+      <span class="visuelt-skjult">Sortér efter</span>
+      <select data-sorter>
+        <option value="pris">Laveste pris</option>
+        <option value="score">Højeste score</option>
+      </select>
+    </label>
+  </div>
 </div>
-<div class="tabel-wrap" role="region" aria-label="Sammenligning af a-kasser" tabindex="0">
-<table class="data" data-sortabel>
-  <caption class="visuelt-skjult">Priser på a-kasser i 2026, sorteret fra billigst til dyrest</caption>
-  <thead>
-    <tr>
-      <th scope="col" class="c-nr">#</th>
-      <th scope="col" class="c-navn">A-kasse</th>
-      <th scope="col" class="c-score"><button type="button" data-sort="score">Score <span aria-hidden="true">↕</span></button></th>
-      <th scope="col" class="c-pris" aria-sort="ascending"><button type="button" data-sort="pris">Pris/md. <span aria-hidden="true">↕</span></button></th>
-      <th scope="col" class="c-ff">Fagforening</th>
-      <th scope="col" class="c-aab">Adgang</th>
-      <th scope="col" class="c-selv">Selvstændig</th>
-      <th scope="col" class="c-diff">Merpris pr. år</th>
-      <th scope="col" class="c-cta"><span class="visuelt-skjult">Link</span></th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+<ol class="ak-liste">
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="false"
       data-navn="din sundhedsfaglige a-kasse (dsa) sygeplejersker, bioanalytikere, radiografer, jordemødre og andre sundhedsfaglige"
       data-pris="485" data-score="4.9">
-    <td class="c-nr"><span class="nr">1</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/dsa/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/dsa.webp" alt="Din Sundhedsfaglige A-kasse (DSA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>DSA</strong><span class="badge">Landets laveste pris</span></span>
-          <span class="navn-hoej">Landets laveste kontingent</span>
-          <span class="navn-maal">Sygeplejersker, bioanalytikere, radiografer, jordemødre og andre sundhedsfaglige</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:98%">★★★★★</span></span><span class="stjerne-tal">4,9</span></td>
-    <td class="c-pris"><span class="pris">485</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">335 kr. efter fradrag</span></td>
-    <td class="c-ff">—</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff diff--bedst">Billigst</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.dsa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dsa">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/dsa/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">1</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/dsa.webp" alt="Din Sundhedsfaglige A-kasse (DSA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:98%">★★★★★</span></span><span class="stjerne-tal">4,9</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/dsa/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="dsalandets-laveste-pris"><a href="/a-kasser/dsa/">DSA</a><span class="badge">Landets laveste pris</span></h3>
+      <p class="ak-maal">Sygeplejersker, bioanalytikere, radiografer, jordemødre og andre sundhedsfaglige</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Tilbydes ikke</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>100.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">485<small>kr./md.</small></span>
+        <span class="ak-prisnet">335 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.dsa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dsa">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="true"
       data-fagforening="false"
       data-navn="ajks a-kasse journalister, kommunikationsfolk, tekstforfattere, oversættere og sprogfolk"
       data-pris="496" data-score="4.9">
-    <td class="c-nr"><span class="nr">2</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/ajks/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/ajks.webp" alt="AJKS A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>AJKS</strong></span>
-          <span class="navn-hoej">Meget lavt kontingent</span>
-          <span class="navn-maal">Journalister, kommunikationsfolk, tekstforfattere, oversættere og sprogfolk</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:98%">★★★★★</span></span><span class="stjerne-tal">4,9</span></td>
-    <td class="c-pris"><span class="pris">496</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">342 kr. efter fradrag</span></td>
-    <td class="c-ff">—</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+132 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://ajks.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ajks">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/ajks/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">2</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/ajks.webp" alt="AJKS A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:98%">★★★★★</span></span><span class="stjerne-tal">4,9</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/ajks/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="ajks"><a href="/a-kasser/ajks/">AJKS</a></h3>
+      <p class="ak-maal">Journalister, kommunikationsfolk, tekstforfattere, oversættere og sprogfolk</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Tilbydes ikke</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>22.700</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">496<small>kr./md.</small></span>
+        <span class="ak-prisnet">342 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://ajks.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ajks">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="true"
       data-fagforening="false"
       data-navn="akademikernes a-kasse (aka) studerende og færdiguddannede med en videregående uddannelse"
       data-pris="499" data-score="4.8">
-    <td class="c-nr"><span class="nr">3</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/akademikernes/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/akademikernes.webp" alt="Akademikernes A-kasse (AKA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Akademikernes</strong><span class="badge">Størst for akademikere</span></span>
-          <span class="navn-hoej">275.000 medlemmer</span>
-          <span class="navn-maal">Studerende og færdiguddannede med en videregående uddannelse</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:96%">★★★★★</span></span><span class="stjerne-tal">4,8</span></td>
-    <td class="c-pris"><span class="pris">499</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">344 kr. efter fradrag</span></td>
-    <td class="c-ff">—</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+168 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.aka.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="akademikernes">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/akademikernes/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">3</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/akademikernes.webp" alt="Akademikernes A-kasse (AKA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:96%">★★★★★</span></span><span class="stjerne-tal">4,8</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/akademikernes/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="akademikernesstoerst-for-akademikere"><a href="/a-kasser/akademikernes/">Akademikernes</a><span class="badge">Størst for akademikere</span></h3>
+      <p class="ak-maal">Studerende og færdiguddannede med en videregående uddannelse</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Tilbydes ikke</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>275.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">499<small>kr./md.</small></span>
+        <span class="ak-prisnet">344 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.aka.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="akademikernes">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="false"
       data-navn="lærernes a-kasse (dlfa) lærere og undervisere fra folkeskole til gymnasium, efterskole og friskole"
       data-pris="503" data-score="4.4">
-    <td class="c-nr"><span class="nr">4</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/laerernes/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/laerernes.webp" alt="Lærernes A-kasse (DLFA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Lærernes</strong></span>
-          <span class="navn-hoej">Lavt kontingent</span>
-          <span class="navn-maal">Lærere og undervisere fra folkeskole til gymnasium, efterskole og friskole</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:88%">★★★★★</span></span><span class="stjerne-tal">4,4</span></td>
-    <td class="c-pris"><span class="pris">503</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">347 kr. efter fradrag</span></td>
-    <td class="c-ff">—</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+216 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.dlfa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="laerernes">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/laerernes/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">4</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/laerernes.webp" alt="Lærernes A-kasse (DLFA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:88%">★★★★★</span></span><span class="stjerne-tal">4,4</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/laerernes/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="laerernes"><a href="/a-kasser/laerernes/">Lærernes</a></h3>
+      <p class="ak-maal">Lærere og undervisere fra folkeskole til gymnasium, efterskole og friskole</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Tilbydes ikke</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>76.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">503<small>kr./md.</small></span>
+        <span class="ak-prisnet">347 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.dlfa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="laerernes">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="socialpædagogernes a-kasse socialpædagoger og ansatte på bo-, døgn- og specialtilbud"
       data-pris="507" data-score="4.6">
-    <td class="c-nr"><span class="nr">5</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/socialpaedagogerne/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/socialpaedagogerne.webp" alt="Socialpædagogernes A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Socialpædagogerne</strong></span>
-          <span class="navn-hoej">Lavt kontingent</span>
-          <span class="navn-maal">Socialpædagoger og ansatte på bo-, døgn- og specialtilbud</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,6 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:92%">★★★★★</span></span><span class="stjerne-tal">4,6</span></td>
-    <td class="c-pris"><span class="pris">507</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">350 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+264 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://sl.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="socialpaedagogerne">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/socialpaedagogerne/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">5</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/socialpaedagogerne.webp" alt="Socialpædagogernes A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,6 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:92%">★★★★★</span></span><span class="stjerne-tal">4,6</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/socialpaedagogerne/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="socialpaedagogerne"><a href="/a-kasser/socialpaedagogerne/">Socialpædagogerne</a></h3>
+      <p class="ak-maal">Socialpædagoger og ansatte på bo-, døgn- og specialtilbud</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>40.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">507<small>kr./md.</small></span>
+        <span class="ak-prisnet">350 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://sl.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="socialpaedagogerne">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="business danmark a-kasse sælgere, key account managere og andre i salg og marketing"
       data-pris="524" data-score="4.4">
-    <td class="c-nr"><span class="nr">6</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/business-danmark/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/business-danmark.webp" alt="Business Danmark A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Business Danmark</strong></span>
-          <span class="navn-hoej">Ekspertise i provision, bonus og firmabil</span>
-          <span class="navn-maal">Sælgere, key account managere og andre i salg og marketing</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:88%">★★★★★</span></span><span class="stjerne-tal">4,4</span></td>
-    <td class="c-pris"><span class="pris">524</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">362 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+468 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.businessdanmark.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="business-danmark">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/business-danmark/">Læs mere</a></td>
-  </tr>
-  <tr data-type="tvaerfaglig" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">6</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/business-danmark.webp" alt="Business Danmark A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:88%">★★★★★</span></span><span class="stjerne-tal">4,4</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/business-danmark/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="business-danmark"><a href="/a-kasser/business-danmark/">Business Danmark</a></h3>
+      <p class="ak-maal">Sælgere, key account managere og andre i salg og marketing</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>25.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">524<small>kr./md.</small></span>
+        <span class="ak-prisnet">362 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.businessdanmark.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="business-danmark">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="tvaerfaglig" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="det faglige hus a-kasse alle brancher og uddannelsesniveauer"
       data-pris="528" data-score="4.8">
-    <td class="c-nr"><span class="nr">7</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/det-faglige-hus/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/det-faglige-hus.webp" alt="Det Faglige Hus A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Det Faglige Hus</strong><span class="badge">Billigst for alle</span></span>
-          <span class="navn-hoej">Billigst med adgang for alle</span>
-          <span class="navn-maal">Alle brancher og uddannelsesniveauer</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:96%">★★★★★</span></span><span class="stjerne-tal">4,8</span></td>
-    <td class="c-pris"><span class="pris">528</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">364 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+69</strong> kr.</td>
-    <td class="c-aab">Åben for alle</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+516 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.detfagligehus.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="det-faglige-hus">Meld dig ind<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/det-faglige-hus/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">7</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/det-faglige-hus.webp" alt="Det Faglige Hus A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:96%">★★★★★</span></span><span class="stjerne-tal">4,8</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/det-faglige-hus/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="det-faglige-husbilligst-for-alle"><a href="/a-kasser/det-faglige-hus/">Det Faglige Hus</a><span class="badge">Billigst for alle</span></h3>
+      <p class="ak-maal">Alle brancher og uddannelsesniveauer</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Åben for alle</dd></div>
+        <div><dt>Fagforening</dt><dd>69 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>242.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">528<small>kr./md.</small></span>
+        <span class="ak-prisnet">364 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.detfagligehus.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="det-faglige-hus">Bliv medlem<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="hk&#x27;s a-kasse kontor, handel, it, laborant og kommunale hk-områder"
       data-pris="530" data-score="4.0">
-    <td class="c-nr"><span class="nr">8</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/hk/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/hk.webp" alt="HK&#x27;s A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>HK</strong></span>
-          <span class="navn-hoej">180.000 medlemmer</span>
-          <span class="navn-maal">Kontor, handel, it, laborant og kommunale HK-områder</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:80%">★★★★★</span></span><span class="stjerne-tal">4,0</span></td>
-    <td class="c-pris"><span class="pris">530</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">366 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+510</strong> kr.</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+540 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.hk.dk/akasse" target="_blank" rel="sponsored nofollow noopener" data-akasse="hk">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/hk/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">8</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/hk.webp" alt="HK&#x27;s A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:80%">★★★★★</span></span><span class="stjerne-tal">4,0</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/hk/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="hk"><a href="/a-kasser/hk/">HK</a></h3>
+      <p class="ak-maal">Kontor, handel, it, laborant og kommunale HK-områder</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>510 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>180.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">530<small>kr./md.</small></span>
+        <span class="ak-prisnet">366 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.hk.dk/akasse" target="_blank" rel="sponsored nofollow noopener" data-akasse="hk">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="foa&#x27;s a-kasse sosu, pædagogmedhjælpere, teknisk service, brand og redning"
       data-pris="534" data-score="3.9">
-    <td class="c-nr"><span class="nr">9</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/foa/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/foa.webp" alt="FOA&#x27;s A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>FOA</strong></span>
-          <span class="navn-hoej">173.000 medlemmer</span>
-          <span class="navn-maal">SOSU, pædagogmedhjælpere, teknisk service, brand og redning</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:78%">★★★★★</span></span><span class="stjerne-tal">3,9</span></td>
-    <td class="c-pris"><span class="pris">534</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">368 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+588 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.foa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="foa">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/foa/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">9</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/foa.webp" alt="FOA&#x27;s A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:78%">★★★★★</span></span><span class="stjerne-tal">3,9</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/foa/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="foa"><a href="/a-kasser/foa/">FOA</a></h3>
+      <p class="ak-maal">SOSU, pædagogmedhjælpere, teknisk service, brand og redning</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>173.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">534<small>kr./md.</small></span>
+        <span class="ak-prisnet">368 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.foa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="foa">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="bupl-a pædagoger og pædagogstuderende"
       data-pris="536" data-score="3.8">
-    <td class="c-nr"><span class="nr">10</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/bupl/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/bupl.webp" alt="BUPL-A logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>BUPL-A</strong></span>
-          <span class="navn-hoej">Specialiseret i pædagogområdet</span>
-          <span class="navn-maal">Pædagoger og pædagogstuderende</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:76%">★★★★★</span></span><span class="stjerne-tal">3,8</span></td>
-    <td class="c-pris"><span class="pris">536</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">370 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+612 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://bupl.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="bupl">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/bupl/">Læs mere</a></td>
-  </tr>
-  <tr data-type="tvaerfaglig" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">10</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/bupl.webp" alt="BUPL-A logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:76%">★★★★★</span></span><span class="stjerne-tal">3,8</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/bupl/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="bupl-a"><a href="/a-kasser/bupl/">BUPL-A</a></h3>
+      <p class="ak-maal">Pædagoger og pædagogstuderende</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>60.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">536<small>kr./md.</small></span>
+        <span class="ak-prisnet">370 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://bupl.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="bupl">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="tvaerfaglig" data-selvstaendig="true"
       data-fagforening="false"
       data-navn="min a-kasse lønmodtagere og selvstændige på tværs af fag"
       data-pris="542" data-score="4.1">
-    <td class="c-nr"><span class="nr">11</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/min-akasse/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/min-akasse.webp" alt="Min A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Min A-kasse</strong></span>
-          <span class="navn-hoej">Åben for alle · tager selvstændige</span>
-          <span class="navn-maal">Lønmodtagere og selvstændige på tværs af fag</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,1 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:82%">★★★★★</span></span><span class="stjerne-tal">4,1</span></td>
-    <td class="c-pris"><span class="pris">542</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">374 kr. efter fradrag</span></td>
-    <td class="c-ff">—</td>
-    <td class="c-aab">Åben for alle</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+684 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://minakasse.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="min-akasse">Meld dig ind<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/min-akasse/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">11</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/min-akasse.webp" alt="Min A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,1 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:82%">★★★★★</span></span><span class="stjerne-tal">4,1</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/min-akasse/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="min-a-kasse"><a href="/a-kasser/min-akasse/">Min A-kasse</a></h3>
+      <p class="ak-maal">Lønmodtagere og selvstændige på tværs af fag</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Åben for alle</dd></div>
+        <div><dt>Fagforening</dt><dd>Tilbydes ikke</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>50.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">542<small>kr./md.</small></span>
+        <span class="ak-prisnet">374 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://minakasse.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="min-akasse">Bliv medlem<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="lederne a-kasse ledere, mellemledere og specialister med lederambitioner"
       data-pris="542" data-score="3.9">
-    <td class="c-nr"><span class="nr">12</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/lederne/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/lederne.webp" alt="Lederne A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Lederne</strong></span>
-          <span class="navn-hoej">Specialiseret ledersparring og karriererådgivning</span>
-          <span class="navn-maal">Ledere, mellemledere og specialister med lederambitioner</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:78%">★★★★★</span></span><span class="stjerne-tal">3,9</span></td>
-    <td class="c-pris"><span class="pris">542</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">374 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+684 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.lederne.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="lederne">Meld dig ind<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/lederne/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">12</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/lederne.webp" alt="Lederne A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,9 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:78%">★★★★★</span></span><span class="stjerne-tal">3,9</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/lederne/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="lederne"><a href="/a-kasser/lederne/">Lederne</a></h3>
+      <p class="ak-maal">Ledere, mellemledere og specialister med lederambitioner</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>130.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">542<small>kr./md.</small></span>
+        <span class="ak-prisnet">374 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.lederne.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="lederne">Bliv medlem<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="true"
       data-fagforening="false"
       data-navn="ma – magistrenes a-kasse kandidater fra universiteterne, især humaniora og naturvidenskab"
       data-pris="544" data-score="3.7">
-    <td class="c-nr"><span class="nr">13</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/ma/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/ma.webp" alt="MA – Magistrenes A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>MA</strong></span>
-          <span class="navn-hoej">Stort udbud af kurser og jobsøgningsforløb</span>
-          <span class="navn-maal">Kandidater fra universiteterne, især humaniora og naturvidenskab</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,7 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:74%">★★★★★</span></span><span class="stjerne-tal">3,7</span></td>
-    <td class="c-pris"><span class="pris">544</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">375 kr. efter fradrag</span></td>
-    <td class="c-ff">—</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+708 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://ma-kasse.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ma">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/ma/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">13</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/ma.webp" alt="MA – Magistrenes A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,7 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:74%">★★★★★</span></span><span class="stjerne-tal">3,7</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/ma/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="ma"><a href="/a-kasser/ma/">MA</a></h3>
+      <p class="ak-maal">Kandidater fra universiteterne, især humaniora og naturvidenskab</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Tilbydes ikke</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>90.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">544<small>kr./md.</small></span>
+        <span class="ak-prisnet">375 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://ma-kasse.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ma">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="faglig fælles a-kasse (3f) bygge og anlæg, transport, industri, service og grønne områder"
       data-pris="552" data-score="3.4">
-    <td class="c-nr"><span class="nr">14</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/3f/">
-        <span class="navn-logo"><span class="logo logo--lille logo--tekst" aria-hidden="true">3</span></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>3F</strong><span class="badge">Flest medlemmer</span></span>
-          <span class="navn-hoej">269.000 medlemmer</span>
-          <span class="navn-maal">Bygge og anlæg, transport, industri, service og grønne områder</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></td>
-    <td class="c-pris"><span class="pris">552</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">381 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+472</strong> kr.</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+804 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.3f.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="3f">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/3f/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">14</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><span class="logo logo--tekst" aria-hidden="true">3</span></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/3f/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="3fflest-medlemmer"><a href="/a-kasser/3f/">3F</a><span class="badge">Flest medlemmer</span></h3>
+      <p class="ak-maal">Bygge og anlæg, transport, industri, service og grønne områder</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>472 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>269.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">552<small>kr./md.</small></span>
+        <span class="ak-prisnet">381 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.3f.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="3f">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="byggefagenes a-kasse (bfa) tømrere, murere, malere, gulvlæggere og andre byggefag"
       data-pris="553" data-score="3.4">
-    <td class="c-nr"><span class="nr">15</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/bfa/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/bfa.webp" alt="Byggefagenes A-kasse (BFA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>BFA</strong></span>
-          <span class="navn-hoej">Kender sæsonledighed, akkord og hjemsendelser</span>
-          <span class="navn-maal">Tømrere, murere, malere, gulvlæggere og andre byggefag</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></td>
-    <td class="c-pris"><span class="pris">553</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">382 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+816 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://bf-a.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="bfa">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/bfa/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">15</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/bfa.webp" alt="Byggefagenes A-kasse (BFA) logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/bfa/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="bfa"><a href="/a-kasser/bfa/">BFA</a></h3>
+      <p class="ak-maal">Tømrere, murere, malere, gulvlæggere og andre byggefag</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>30.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">553<small>kr./md.</small></span>
+        <span class="ak-prisnet">382 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://bf-a.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="bfa">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="teknisk landsforbunds a-kasse (tl) tekniske designere, konstruktører, bygningskonstruktører og designere"
       data-pris="553" data-score="3.4">
-    <td class="c-nr"><span class="nr">16</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/teknisk-landsforbund/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/teknisk-landsforbund.webp" alt="Teknisk Landsforbunds A-kasse (TL) logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>TL</strong></span>
-          <span class="navn-hoej">Specialiseret i tekniske designfag</span>
-          <span class="navn-maal">Tekniske designere, konstruktører, bygningskonstruktører og designere</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></td>
-    <td class="c-pris"><span class="pris">553</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">382 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+816 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.tl.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="teknisk-landsforbund">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/teknisk-landsforbund/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">16</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/teknisk-landsforbund.webp" alt="Teknisk Landsforbunds A-kasse (TL) logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/teknisk-landsforbund/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="tl"><a href="/a-kasser/teknisk-landsforbund/">TL</a></h3>
+      <p class="ak-maal">Tekniske designere, konstruktører, bygningskonstruktører og designere</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>25.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">553<small>kr./md.</small></span>
+        <span class="ak-prisnet">382 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.tl.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="teknisk-landsforbund">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="metals a-kasse smede, mekanikere, industriteknikere, elektronikfagteknikere og it-supportere"
       data-pris="554" data-score="3.4">
-    <td class="c-nr"><span class="nr">17</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/dansk-metal/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/dansk-metal.webp" alt="Metals A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Dansk Metal</strong></span>
-          <span class="navn-hoej">Stærk overenskomstdækning i industrien</span>
-          <span class="navn-maal">Smede, mekanikere, industriteknikere, elektronikfagteknikere og it-supportere</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></td>
-    <td class="c-pris"><span class="pris">554</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">382 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+828 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.danskmetal.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dansk-metal">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/dansk-metal/">Læs mere</a></td>
-  </tr>
-  <tr data-type="tvaerfaglig" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">17</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/dansk-metal.webp" alt="Metals A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,4 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:68%">★★★★★</span></span><span class="stjerne-tal">3,4</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/dansk-metal/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="dansk-metal"><a href="/a-kasser/dansk-metal/">Dansk Metal</a></h3>
+      <p class="ak-maal">Smede, mekanikere, industriteknikere, elektronikfagteknikere og it-supportere</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>95.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">554<small>kr./md.</small></span>
+        <span class="ak-prisnet">382 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.danskmetal.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dansk-metal">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="tvaerfaglig" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="frie – frie funktionærer a-kasse funktionærer, lønmodtagere og selvstændige på tværs af brancher"
       data-pris="555" data-score="4.1">
-    <td class="c-nr"><span class="nr">18</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/frie/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/frie.webp" alt="Frie – Frie Funktionærer A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Frie</strong></span>
-          <span class="navn-hoej">Åben for alle · tager selvstændige</span>
-          <span class="navn-maal">Funktionærer, lønmodtagere og selvstændige på tværs af brancher</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,1 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:82%">★★★★★</span></span><span class="stjerne-tal">4,1</span></td>
-    <td class="c-pris"><span class="pris">555</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">383 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+149</strong> kr.</td>
-    <td class="c-aab">Åben for alle</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+840 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.frie.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="frie">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/frie/">Læs mere</a></td>
-  </tr>
-  <tr data-type="tvaerfaglig" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">18</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/frie.webp" alt="Frie – Frie Funktionærer A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,1 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:82%">★★★★★</span></span><span class="stjerne-tal">4,1</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/frie/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="frie"><a href="/a-kasser/frie/">Frie</a></h3>
+      <p class="ak-maal">Funktionærer, lønmodtagere og selvstændige på tværs af brancher</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Åben for alle</dd></div>
+        <div><dt>Fagforening</dt><dd>149 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>44.614</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">555<small>kr./md.</small></span>
+        <span class="ak-prisnet">383 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.frie.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="frie">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="tvaerfaglig" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="krifa a-kasse alle brancher, også selvstændige"
       data-pris="556" data-score="4.1">
-    <td class="c-nr"><span class="nr">19</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/krifa/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/krifa.webp" alt="Krifa A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Krifa</strong></span>
-          <span class="navn-hoej">Åben for alle · tager selvstændige</span>
-          <span class="navn-maal">Alle brancher, også selvstændige</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,1 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:82%">★★★★★</span></span><span class="stjerne-tal">4,1</span></td>
-    <td class="c-pris"><span class="pris">556</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">384 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+159</strong> kr.</td>
-    <td class="c-aab">Åben for alle</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+852 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.krifa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="krifa">Meld dig ind<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/krifa/">Læs mere</a></td>
-  </tr>
-  <tr data-type="tvaerfaglig" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">19</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/krifa.webp" alt="Krifa A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,1 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:82%">★★★★★</span></span><span class="stjerne-tal">4,1</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/krifa/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="krifa"><a href="/a-kasser/krifa/">Krifa</a></h3>
+      <p class="ak-maal">Alle brancher, også selvstændige</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Åben for alle</dd></div>
+        <div><dt>Fagforening</dt><dd>159 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>147.091</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">556<small>kr./md.</small></span>
+        <span class="ak-prisnet">384 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.krifa.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="krifa">Bliv medlem<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="tvaerfaglig" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="ase a-kasse selvstændige, freelancere og lønmodtagere i alle brancher"
       data-pris="560" data-score="4.0">
-    <td class="c-nr"><span class="nr">20</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/ase/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/ase.webp" alt="Ase A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Ase</strong><span class="badge">Bedst til selvstændige</span></span>
-          <span class="navn-hoej">Fagforening for kun 74 kr.</span>
-          <span class="navn-maal">Selvstændige, freelancere og lønmodtagere i alle brancher</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="4,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:80%">★★★★★</span></span><span class="stjerne-tal">4,0</span></td>
-    <td class="c-pris"><span class="pris">560</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">386 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+74</strong> kr.</td>
-    <td class="c-aab">Åben for alle</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+900 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.ase.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ase">Meld dig ind<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/ase/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">20</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/ase.webp" alt="Ase A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="4,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:80%">★★★★★</span></span><span class="stjerne-tal">4,0</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/ase/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="asebedst-til-selvstaendige"><a href="/a-kasser/ase/">Ase</a><span class="badge">Bedst til selvstændige</span></h3>
+      <p class="ak-maal">Selvstændige, freelancere og lønmodtagere i alle brancher</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Åben for alle</dd></div>
+        <div><dt>Fagforening</dt><dd>74 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>130.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">560<small>kr./md.</small></span>
+        <span class="ak-prisnet">386 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.ase.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ase">Bliv medlem<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="ca a-kasse erhvervsøkonomer, hd&#x27;ere, cand.merc.&#x27;er og ledere i det private"
       data-pris="561" data-score="3.5">
-    <td class="c-nr"><span class="nr">21</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/ca/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/ca.webp" alt="CA A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>CA</strong></span>
-          <span class="navn-hoej">Stærk karrierecoaching og individuel sparring</span>
-          <span class="navn-maal">Erhvervsøkonomer, HD&#x27;ere, cand.merc.&#x27;er og ledere i det private</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,5 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:70%">★★★★★</span></span><span class="stjerne-tal">3,5</span></td>
-    <td class="c-pris"><span class="pris">561</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">387 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+912 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.ca.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ca">Meld dig ind<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/ca/">Læs mere</a></td>
-  </tr>
-  <tr data-type="tvaerfaglig" data-selvstaendig="true"
+    <span class="ak-nr" aria-hidden="true">21</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/ca.webp" alt="CA A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,5 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:70%">★★★★★</span></span><span class="stjerne-tal">3,5</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/ca/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="ca"><a href="/a-kasser/ca/">CA</a></h3>
+      <p class="ak-maal">Erhvervsøkonomer, HD&#x27;ere, cand.merc.&#x27;er og ledere i det private</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>65.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">561<small>kr./md.</small></span>
+        <span class="ak-prisnet">387 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.ca.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="ca">Bliv medlem<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="tvaerfaglig" data-selvstaendig="true"
       data-fagforening="true"
       data-navn="din faglige a-kasse alle brancher"
       data-pris="568" data-score="3.8">
-    <td class="c-nr"><span class="nr">22</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/din-faglige-akasse/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/din-faglige-akasse.webp" alt="Din Faglige A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Din Faglige A-kasse</strong></span>
-          <span class="navn-hoej">Fagforening for kun 99 kr.</span>
-          <span class="navn-maal">Alle brancher</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:76%">★★★★★</span></span><span class="stjerne-tal">3,8</span></td>
-    <td class="c-pris"><span class="pris">568</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">392 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+99</strong> kr.</td>
-    <td class="c-aab">Åben for alle</td>
-    <td class="c-selv"><span class="ja">Ja</span></td>
-    <td class="c-diff"><span class="diff">+996 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://dinfagligeakasse.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="din-faglige-akasse">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/din-faglige-akasse/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">22</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/din-faglige-akasse.webp" alt="Din Faglige A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,8 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:76%">★★★★★</span></span><span class="stjerne-tal">3,8</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/din-faglige-akasse/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="din-faglige-a-kasse"><a href="/a-kasser/din-faglige-akasse/">Din Faglige A-kasse</a></h3>
+      <p class="ak-maal">Alle brancher</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Åben for alle</dd></div>
+        <div><dt>Fagforening</dt><dd>99 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Ja</dd></div>
+        <div><dt>Medlemmer</dt><dd>—</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">568<small>kr./md.</small></span>
+        <span class="ak-prisnet">392 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://dinfagligeakasse.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="din-faglige-akasse">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="nnf&#x27;s a-kasse slagtere, bagere, mejerister og ansatte i fødevareindustrien"
       data-pris="568" data-score="3.0">
-    <td class="c-nr"><span class="nr">23</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/nnf/">
-        <span class="navn-logo"><span class="logo logo--lille logo--tekst" aria-hidden="true">N</span></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>NNF</strong></span>
-          <span class="navn-hoej">Specialiseret i fødevareindustrien</span>
-          <span class="navn-maal">Slagtere, bagere, mejerister og ansatte i fødevareindustrien</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:60%">★★★★★</span></span><span class="stjerne-tal">3,0</span></td>
-    <td class="c-pris"><span class="pris">568</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">392 kr. efter fradrag</span></td>
-    <td class="c-ff"><strong>+394</strong> kr.</td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+996 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://www.nnf.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="nnf">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/nnf/">Læs mere</a></td>
-  </tr>
-  <tr data-type="fagspecifik" data-selvstaendig="false"
+    <span class="ak-nr" aria-hidden="true">23</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><span class="logo logo--tekst" aria-hidden="true">N</span></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:60%">★★★★★</span></span><span class="stjerne-tal">3,0</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/nnf/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="nnf"><a href="/a-kasser/nnf/">NNF</a></h3>
+      <p class="ak-maal">Slagtere, bagere, mejerister og ansatte i fødevareindustrien</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>394 kr./md.</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>20.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">568<small>kr./md.</small></span>
+        <span class="ak-prisnet">392 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://www.nnf.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="nnf">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li>
+  <li class="ak-raekke" data-raekke
+      data-type="fagspecifik" data-selvstaendig="false"
       data-fagforening="true"
       data-navn="dansk el-forbunds a-kasse elektrikere, elektronikfagteknikere og lærlinge i elfaget"
       data-pris="568" data-score="3.0">
-    <td class="c-nr"><span class="nr">24</span></td>
-    <td class="c-navn">
-      <a class="navn-link" href="/a-kasser/dansk-el-forbund/">
-        <span class="navn-logo"><img class="logo logo--lille" src="/assets/img/logoer/dansk-el-forbund.webp" alt="Dansk El-Forbunds A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
-        <span class="navn-tekst">
-          <span class="navn-top"><strong>Dansk El-Forbund</strong></span>
-          <span class="navn-hoej">Specialiseret i elfaget</span>
-          <span class="navn-maal">Elektrikere, elektronikfagteknikere og lærlinge i elfaget</span>
-        </span>
-      </a>
-    </td>
-    <td class="c-score"><span class="stjerner" role="img" aria-label="3,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:60%">★★★★★</span></span><span class="stjerne-tal">3,0</span></td>
-    <td class="c-pris"><span class="pris">568</span><span class="pris-enhed">kr./md.</span>
-        <span class="pris-net">392 kr. efter fradrag</span></td>
-    <td class="c-ff"><span class="ja">Inkluderet</span></td>
-    <td class="c-aab">Fagspecifik</td>
-    <td class="c-selv"><span class="nej">Nej</span></td>
-    <td class="c-diff"><span class="diff">+996 kr./år</span></td>
-    <td class="c-cta"><a class="knap knap--lille" href="https://def.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dansk-el-forbund">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
-        <a class="c-cta-laes" href="/a-kasser/dansk-el-forbund/">Læs mere</a></td>
-  </tr>
-  </tbody>
-</table>
-</div>
-<p class="tabel-note">Priser er kontingent for a-kassen alene pr. måned i 2026. «Efter fradrag» viser den reelle udgift ved en marginalskat på ca. 31 %. Scoren beregnes ud fra pris, adgang og ydelser — <a href="/redaktionelle-principper/#saadan-beregner-vi-scoren">se metoden</a>. Sidst kontrolleret 2026-08-01. <a href="/saadan-tjener-vi-penge/">Sådan tjener vi penge</a>.</p>
-<p class="tomt-resultat" hidden>Ingen a-kasser matcher din søgning. Prøv et andet ord, eller <button type="button" class="link-knap" data-nulstil>nulstil filtre</button>.</p>
+    <span class="ak-nr" aria-hidden="true">24</span>
+    <div class="ak-brand">
+      <span class="ak-logo"><img class="logo" src="/assets/img/logoer/dansk-el-forbund.webp" alt="Dansk El-Forbunds A-kasse logo" width="120" height="48" loading="lazy" decoding="async"></span>
+      <span class="ak-score"><span class="stjerner" role="img" aria-label="3,0 ud af 5 point"><span class="stjerne-bund">★★★★★</span><span class="stjerne-fyld" style="width:60%">★★★★★</span></span><span class="stjerne-tal">3,0</span></span>
+      <a class="ak-anmeldelse" href="/a-kasser/dansk-el-forbund/">Læs anmeldelse</a>
+    </div>
+    <div class="ak-info">
+      <h3 class="ak-navn" id="dansk-el-forbund"><a href="/a-kasser/dansk-el-forbund/">Dansk El-Forbund</a></h3>
+      <p class="ak-maal">Elektrikere, elektronikfagteknikere og lærlinge i elfaget</p>
+      <dl class="ak-fakta">
+        <div><dt>Adgang</dt><dd>Fagspecifik</dd></div>
+        <div><dt>Fagforening</dt><dd>Inkluderet</dd></div>
+        <div><dt>Selvstændige</dt><dd>Nej</dd></div>
+        <div><dt>Medlemmer</dt><dd>30.000</dd></div>
+      </dl>
+    </div>
+    <div class="ak-handling">
+      <div class="ak-prisboks">
+        <span class="ak-prislabel">A-kasse pris</span>
+        <span class="ak-pristal">568<small>kr./md.</small></span>
+        <span class="ak-prisnet">392 kr. efter fradrag</span>
+      </div>
+      <a class="knap knap--liste" href="https://def.dk/" target="_blank" rel="sponsored nofollow noopener" data-akasse="dansk-el-forbund">Se hos udbyder<span class="knap__pil" aria-hidden="true">→</span></a>
+    </div>
+  </li></ol>
+<p class="tomt-resultat" hidden>Ingen a-kasser matcher din søgning. <button type="button" class="link-knap" data-nulstil>Nulstil filtre</button></p>
+<p class="liste-note">Priser er kontingent for a-kassen alene pr. måned i 2026. «Efter fradrag» er den reelle udgift ved en marginalskat på ca. 31 %. Scoren beregnes ud fra pris, adgang og ydelser — <a href="/redaktionelle-principper/#saadan-beregner-vi-scoren">se metoden</a>. Sidst kontrolleret 2026-08-01. <a href="/saadan-tjener-vi-penge/">Sådan tjener vi penge</a>.</p>
 </div>
 
 <h2 id="hvad-bestaar-kontingentet-af">Hvad består kontingentet af?</h2>
@@ -753,7 +863,7 @@
 <h3 id="3-administrationsbidraget-mellem-71-og-154-kr-om-maaneden">3. Administrationsbidraget — mellem 71 og 154 kr. om måneden</h3>
 <p>Det er her, forskellene opstår. Administrationsbidraget dækker a-kassens egen drift: sagsbehandlere, rådgivning, kurser, it-systemer, kontorer og medlemsservice. Det er den eneste del, a-kasserne selv fastsætter.</p>
 
-<p>Det giver et vigtigt perspektiv på prisforskellene. Når den <a href="/billig-a-kasse/">billigste a-kasse</a> koster 485 kr. og den dyreste 568 kr., ser forskellen på 83 kr. beskeden ud — cirka 17 procent. Men målt på det beløb, a-kasserne faktisk råder over, er forskellen mere end det dobbelte fra billigst til dyrest.</p>
+<p>Det giver et vigtigt perspektiv på prisforskellene. Når den <a href="/billigste-a-kasse/">billigste a-kasse</a> koster 485 kr. og den dyreste 568 kr., ser forskellen på 83 kr. beskeden ud — cirka 17 procent. Men målt på det beløb, a-kasserne faktisk råder over, er forskellen mere end det dobbelte fra billigst til dyrest.</p>
 
 <h2 id="hvorfor-steg-priserne-i-2026">Hvorfor steg priserne i 2026?</h2>
 
@@ -893,7 +1003,7 @@
 
 <p>Den vigtigste beslutning er derfor ikke, om du sparer 30 kr. om måneden, men om du får den rådgivning, din situation kræver. Har du en almindelig lønmodtagerstilling, er der ingen grund til at betale mere end de billigste. Driver du virksomhed eller har du en kompliceret lønsammensætning, er specialviden det værd.</p>
 
-<p>Se hele markedet i vores <a href="/sammenlign/">sammenligning af alle 24 a-kasser</a>, eller gå direkte til <a href="/billig-a-kasse/">de billigste a-kasser i 2026</a>.</p>
+<p>Se hele markedet i vores <a href="/sammenlign/">sammenligning af alle 24 a-kasser</a>, eller gå direkte til <a href="/billigste-a-kasse/">de billigste a-kasser i 2026</a>.</p>
   </article>
   
 <aside class="forfatter" itemscope itemtype="https://schema.org/Person">
@@ -920,7 +1030,7 @@
   
 <aside class="relaterede">
   <h2 class="rel-overskrift">Læs også</h2>
-  <div class="rel-grid"><a class="rel-kort" href="/billig-a-kasse/"><span class="rel-titel">Billigste a-kasse 2026</span><span class="rel-tekst">Hele prisoversigten og hvornår billigst faktisk er bedst</span></a><a class="rel-kort" href="/skift-a-kasse/"><span class="rel-titel">Skift a-kasse</span><span class="rel-tekst">Gratis, tager fem minutter, anciennitet følger med</span></a><a class="rel-kort" href="/dagpengesatser/"><span class="rel-titel">Dagpengesatser 2026</span><span class="rel-tekst">Højeste sats er 22.041 kr./md.</span></a><a class="rel-kort" href="/dimittend-dagpenge/"><span class="rel-titel">Dagpenge som nyuddannet</span><span class="rel-tekst">Dimittendsats, 14-dages fristen og karensmåneden</span></a></div>
+  <div class="rel-grid"><a class="rel-kort" href="/billigste-a-kasse/"><span class="rel-titel">Billigste a-kasse 2026</span><span class="rel-tekst">Hele prisoversigten og hvornår billigst faktisk er bedst</span></a><a class="rel-kort" href="/skift-a-kasse/"><span class="rel-titel">Skift a-kasse</span><span class="rel-tekst">Gratis, tager fem minutter, anciennitet følger med</span></a><a class="rel-kort" href="/dagpengesatser/"><span class="rel-titel">Dagpengesatser 2026</span><span class="rel-tekst">Højeste sats er 22.041 kr./md.</span></a><a class="rel-kort" href="/dimittend-dagpenge/"><span class="rel-titel">Dagpenge som nyuddannet</span><span class="rel-tekst">Dimittendsats, 14-dages fristen og karensmåneden</span></a></div>
 </aside>
 </div>
 </main>
@@ -937,7 +1047,7 @@
         <h2 class="fod-titel">Sammenlign</h2>
         <ul>
           <li><a href="/sammenlign/">Alle a-kasser og priser</a></li>
-          <li><a href="/billig-a-kasse/">Billigste a-kasse 2026</a></li>
+          <li><a href="/billigste-a-kasse/">Billigste a-kasse 2026</a></li>
           <li><a href="/a-kasse-priser/">A-kasse priser 2026</a></li>
           <li><a href="/a-kasser/">Oversigt over a-kasser</a></li>
           <li><a href="/dagpengeberegner/">Dagpengeberegner</a></li>
